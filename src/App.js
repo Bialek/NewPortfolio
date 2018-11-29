@@ -2,34 +2,39 @@ import React, { Component } from 'react';
 import {
   BrowserRouter as Router,
   Route,
-  Link
 } from 'react-router-dom';
 
 import Home from './Home';
 import Skills from './Skills';
 import Portfolio from './Portfolio';
+import { Page, Nav, NavList, NavItem, MainPage, NavLink } from './Styled/App';
 
 class App extends Component {
   render() {
     return (
       <Router>
-        <div className="container">
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/skills">Skills</Link>
-            </li>
-            <li>
-              <Link to="/portfolio">Portfolio</Link>
-            </li>
-          </ul>
+        <Page>
+          <Nav>
+            <NavList>
+              <NavItem>
+                <NavLink to="/">Home</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink to="/skills">Skills</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink to="/portfolio">Portfolio</NavLink>
+              </NavItem>
+            </NavList>
+          </Nav>
 
-          <Route exact path="/" component={Home} />
-          <Route path="/skills" component={Skills} />
-          <Route path="/portfolio" component={Portfolio} />
-        </div>
+          <MainPage>
+            <Route exact path="/" component={Home} />
+            <Route path="/skills" component={Skills} />
+            <Route path="/portfolio" component={Portfolio} />
+          </MainPage>
+
+        </Page>
       </Router>
     );
   }
