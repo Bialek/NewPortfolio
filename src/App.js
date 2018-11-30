@@ -4,10 +4,11 @@ import {
   Route
 } from 'react-router-dom';
 
+
 import Home from './Home';
 import Skills from './Skills';
 import Portfolio from './Portfolio';
-import { Page, PageBackground, Nav, NavList, NavItem, MainContent, NavLink, NavLogo, NavImg, NavHeader } from './Styled/App';
+import { Page, PageBackground, Nav, NavList, NavItem, MainContent, NavLink, NavLogo, NavImg, NavHeader, NavContact, NavIcon } from './Styled/App';
 
 
 class App extends Component {
@@ -15,7 +16,7 @@ class App extends Component {
     return (
       <Router>
         <Page>
-          <PageBackground src={process.env.PUBLIC_URL + '/images/background.jpg'} />
+          <PageBackground src={process.env.PUBLIC_URL + '/images/background1.gif'} />
           <Nav>
             <NavLink to="/">
               <NavLogo>
@@ -34,6 +35,12 @@ class App extends Component {
                 <NavLink to="/portfolio">Portfolio</NavLink>
               </NavItem>
             </NavList>
+            <NavContact>
+              <NavIcon icon="mobile-alt"/>
+              <NavIcon icon="envelope"/>
+              <NavIcon icon={["fab","github"]}/>
+              <NavIcon icon={["fab","linkedin-in"]}/>
+            </NavContact>
           </Nav>
 
           <MainContent>

@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export const Page = styled.div`
     display: flex;
@@ -11,11 +12,12 @@ export const PageBackground = styled.img`
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100%;  
+    object-fit: cover;
 `
 
 export const Nav = styled.div`
-    width: 25%;
+    width: 350px;
     height: 100vh;
     z-index: 2;
     font-size: .9em;
@@ -59,6 +61,14 @@ export const NavImg = styled.img`
 export const NavHeader = styled.h1`
     margin-bottom: 10px;
     text-align: center;
+`
+
+export const NavContact = styled.div`
+
+`
+
+export const NavIcon = styled(FontAwesomeIcon)`
+
 `
 
 export const MainContent = styled.div`
