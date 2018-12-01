@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 
 export const Page = styled.div`
     display: flex;
@@ -14,6 +14,7 @@ export const PageBackground = styled.img`
     width: 100%;
     height: 100%;  
     object-fit: cover;
+    z-index: -999;
 `
 
 export const Nav = styled.div`
@@ -26,6 +27,7 @@ export const Nav = styled.div`
     padding: 10px;
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
 `
 
 export const NavList = styled.ul`
@@ -39,8 +41,18 @@ export const NavItem = styled.li`
 `
 
 export const NavLink = styled(Link)`
+    font-size: 1.5em;
     text-decoration: none;
     color: #fff;
+    background-image: linear-gradient(to bottom, #fff 0%, #fff 100%);
+    background-repeat: no-repeat;
+    background-size: 0 2px;
+    background-position: 0 100%;
+    padding-bottom: 5px;
+    transition: all ease-in-out .3s;
+    &:hover {
+        background-size: 100% 2px;
+    }
 `
 
 export const NavLogo = styled.div`
@@ -64,11 +76,26 @@ export const NavHeader = styled.h1`
 `
 
 export const NavContact = styled.div`
-
+    display: flex;
+    justify-content: space-around;
 `
 
-export const NavIcon = styled(FontAwesomeIcon)`
-
+export const NavIcon = styled.a`
+    color:  rgb(26, 82, 118);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    background-color: #fff;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    transition: all ease-in-out .3s;
+    border: none;
+    &:hover {
+        color: #fff;
+        background-color: rgb(26, 82, 118);
+    }
 `
 
 export const MainContent = styled.div`
