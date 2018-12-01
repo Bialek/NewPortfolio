@@ -8,7 +8,8 @@ import Home from './Home';
 import Skills from './Skills';
 import Portfolio from './Portfolio';
 
-import { Page, PageBackground, Nav, NavList, NavItem, MainContent, NavLink, NavLogo, NavImg, NavHeader, NavContact, NavIcon } from './Styled/App';
+import { Nav, NavList, NavItem,  NavLink, NavLogo, NavImg, NavHeader, NavContact, NavIcon } from './Styled/Nav';
+import { Page, PageBackground, MainContent } from './Styled/App';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 class App extends Component {
