@@ -1,10 +1,11 @@
 import React from 'react';
+import { Container, Header } from './Styled/App';
 
 const Skills = () => {
   return (
-    <div className="container">
-      <h1>Skills!!</h1>
-    </div>
+    <Container>
+      <Header>Skills</Header>
+    </Container>
   );
 }
 
