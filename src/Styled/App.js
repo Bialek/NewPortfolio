@@ -1,31 +1,40 @@
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
 
 export const Page = styled.div`
-display: flex;
+    display: flex;
+    position: relative;
 `
 
-export const Nav = styled.div`
-    width: 20%;
-    height: 100vh;
-    z-index: 2;
-    font-size: .9em;
-    color: #fff;
-    background-color: rgba(26, 82, 118, 0.7);
-`
-
-export const NavList = styled.ul`
-    list-style: none;
-`
-
-export const NavItem = styled.li`
-    text-decoration: none;
-`
-
-export const NavLink = styled(Link)`
-    text-decoration: none;
-`
-
-export const MainPage = styled.div`
+export const PageBackground = styled.img`
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 100%;  
+    object-fit: cover;
+    z-index: -999;
+`
+
+export const MainContent = styled.div`
+    width: 100%;
+`
+
+export const Container = styled.div`
+    background-color: rgba(166, 166, 166, 0.7);
+    height: 100%;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+`
+
+export const Header = styled.h1`
+    color: #fff;
+    margin-bottom: 20px;
+`
+
+export const Paragraf = styled.p`
+    color: #fff;
+    margin-bottom: 10px;
 `
