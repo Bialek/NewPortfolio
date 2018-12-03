@@ -35,6 +35,10 @@ export const NavLink = styled(Link)`
     background-position: 0 100%;
     padding-bottom: 5px;
     transition: all ease-in-out .3s;
+    display: flex;
+    justify-content: space-evenly;
+    width: 70%;
+    margin: 0 auto;
     &:hover {
         background-size: 100% 2px;
     }
@@ -53,11 +57,6 @@ export const NavImg = styled.img`
     object-position: top;
     object-fit: cover;
     margin: 0 auto 10px;
-`
-
-export const NavHeader = styled.h1`
-    margin-bottom: 10px;
-    text-align: center;
 `
 
 export const NavContact = styled.div`

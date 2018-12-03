@@ -8,8 +8,8 @@ import Home from './Home';
 import Skills from './Skills';
 import Portfolio from './Portfolio';
 
-import { Nav, NavList, NavItem,  NavLink, NavLogo, NavImg, NavHeader, NavContact, NavIcon } from './Styled/Nav';
-import { Page, PageBackground, MainContent } from './Styled/App';
+import { Nav, NavList, NavItem,  NavLink, NavLogo, NavImg, NavContact, NavIcon } from './Styled/Nav';
+import { Page, PageBackground, MainContent, PrimaryHeader } from './Styled/App';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 class App extends Component {
@@ -17,23 +17,32 @@ class App extends Component {
     return (
       <Router>
         <Page>
-          <PageBackground src={process.env.PUBLIC_URL + "/images/background1.gif"} />
+          <PageBackground src={process.env.PUBLIC_URL + "/images/background1.gif"} alt="background" />
           <Nav>
             <NavLink to="/">
               <NavLogo>
-                <NavHeader>Białek Rafał</NavHeader>
-                <NavImg src={process.env.PUBLIC_URL + "/images/me.jpg"} />
+                <PrimaryHeader>Białek Rafał</PrimaryHeader>
+                <NavImg src={process.env.PUBLIC_URL + "/images/me.jpg"} alt="myPhoto"/>
               </NavLogo>
             </NavLink>
             <NavList>
               <NavItem>
-                <NavLink to="/">Home</NavLink> 
+                <NavLink to="/">
+                <FontAwesomeIcon icon="home" />
+                Home
+              </NavLink> 
               </NavItem>
               <NavItem>
-                <NavLink to="/skills">Skills</NavLink>
+                <NavLink to="/skills">
+                  <FontAwesomeIcon icon="chart-bar" />
+                  Skills
+                </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink to="/portfolio">Portfolio</NavLink>
+                <NavLink to="/portfolio">
+                  <FontAwesomeIcon icon="laptop-code" />
+                  Projects
+                </NavLink>
               </NavItem>
             </NavList>
             <NavList>
