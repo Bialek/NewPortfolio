@@ -71,3 +71,12 @@ export const CertificateImg = styled.img`
     max-height: 90px;
     margin: 20px auto;
 `
+
+export const ProjectWrapper = styled.div`
+
+`
+
+export const ProjectImg = styled.img`
+
+
+`
