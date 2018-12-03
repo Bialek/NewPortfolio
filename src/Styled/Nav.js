@@ -13,6 +13,7 @@ export const Nav = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    box-shadow: 3px 0px 5px 0px rgba(0,0,0,0.75);
 `
 
 export const NavList = styled.ul`
@@ -33,7 +34,7 @@ export const NavLink = styled(Link)`
     background-repeat: no-repeat;
     background-size: 0 2px;
     background-position: 0 100%;
-    padding-bottom: 5px;
+    padding-bottom: 10px;
     transition: all ease-in-out .3s;
     display: flex;
     justify-content: space-evenly;

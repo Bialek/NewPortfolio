@@ -63,6 +63,7 @@ export const Certificate = styled.a`
     display: inline-flex;
     flex-direction: column;
     width: 25%;
+    
 `
 
 export const CertificateImg = styled.img`

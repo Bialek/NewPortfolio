@@ -47,7 +47,10 @@ class App extends Component {
             </NavList>
             <NavList>
               <NavItem>
-                <NavLink to="/cv">CV</NavLink> 
+                <NavLink to="/cv">
+                  <FontAwesomeIcon icon ="file-pdf" />
+                  CV
+                </NavLink> 
               </NavItem>
             </NavList>
             <NavContact>

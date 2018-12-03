@@ -55,24 +55,24 @@ const Skills = () => {
             <img src={process.env.PUBLIC_URL + "/images/icon12.png"} alt="icon" />
           </SkillWrapper>
         </div>
-        
+
       <SecondaryHeader>Certificates</SecondaryHeader>
         <div>
           <Certificate href={process.env.PUBLIC_URL + "/images/certificate/kodilla.jpg"} rel="noopener noreferrer" target="_blank">
+            Kodilla Bootcamp
+            <CertificateImg src={process.env.PUBLIC_URL + "/images/certificate/kodilla-m.jpg"} alt="Certificate" />
+          </Certificate>
+          <Certificate href={process.env.PUBLIC_URL + "/images/certificate/html.jpg"} rel="noopener noreferrer" target="_blank">
             SoloLearn HTML
             <CertificateImg src={process.env.PUBLIC_URL + "/images/certificate/html-m.jpg"} alt="Certificate" />
           </Certificate>
-          <Certificate href={process.env.PUBLIC_URL + "/images/certificate/kodilla.jpg"} rel="noopener noreferrer" target="_blank">
+          <Certificate href={process.env.PUBLIC_URL + "/images/certificate/css.jpg"} rel="noopener noreferrer" target="_blank">
             SoloLearn CSS
             <CertificateImg src={process.env.PUBLIC_URL + "/images/certificate/css-m.jpg"} alt="Certificate" />
           </Certificate>
-          <Certificate href={process.env.PUBLIC_URL + "/images/certificate/kodilla.jpg"} rel="noopener noreferrer" target="_blank">
+          <Certificate href={process.env.PUBLIC_URL + "/images/certificate/js.jpg"} rel="noopener noreferrer" target="_blank">
             SoloLearn JavaScript
             <CertificateImg src={process.env.PUBLIC_URL + "/images/certificate/js-m.jpg"} alt="Certificate" />
-          </Certificate>
-          <Certificate href={process.env.PUBLIC_URL + "/images/certificate/kodilla.jpg"} rel="noopener noreferrer" target="_blank">
-            Kodilla Bootcamp
-            <CertificateImg src={process.env.PUBLIC_URL + "/images/certificate/kodilla-m.jpg"} alt="Certificate" />
           </Certificate>
         </div>
 

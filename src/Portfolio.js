@@ -1,10 +1,11 @@
 import React from 'react';
+import { Container, PrimaryHeader } from './Styled/App';
 
 const Portfolio = () => {
   return (
-    <div className="container">
-      <h1>Portfolio!!</h1>
-    </div>
+    <Container>
+      <PrimaryHeader>Projects</PrimaryHeader>
+    </Container>
   );
 }
 
