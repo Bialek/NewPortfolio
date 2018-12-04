@@ -72,11 +72,19 @@ export const CertificateImg = styled.img`
     margin: 20px auto;
 `
 
-export const ProjectWrapper = styled.div`
-
+export const ProjectsWrapper = styled.div`
+    overflow-y: scroll;
+    height: 80vh;
+    &::-webkit-scrollbar { 
+        display: none; 
+    }
 `
 
 export const ProjectImg = styled.img`
 
 
 `
+
+export const Project = styled.div`
+
+` 
