@@ -74,25 +74,17 @@ class Portfolio extends Component {
             <Project key={k}>
               <Slider {...settings}>
                 <div>
-                  <h3>1</h3>
+                <ProjectImg src={process.env.PUBLIC_URL + project.img[0]}/>
                 </div>
                 <div>
-                  <h3>2</h3>
+                <ProjectImg src={process.env.PUBLIC_URL + project.img[1]}/>
                 </div>
                 <div>
-                  <h3>3</h3>
-                </div>
-                <div>
-                  <h3>4</h3>
-                </div>
-                <div>
-                  <h3>5</h3>
-                </div>
-                <div>
-                  <h3>6</h3>
+                <ProjectImg src={process.env.PUBLIC_URL + project.img[2]}/>
                 </div>
               </Slider>
-              {/* <ProjectImg src={process.env.PUBLIC_URL + project.img[0]}/> */}
+
+              {/*  */}
             </Project>
           )}
         </ProjectsWrapper>
