@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import Slider from "react-slick";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from 'react-responsive-carousel';
 import { Container, PrimaryHeader, ProjectsWrapper, Project, ProjectImg } from './Styled/App';
 
 class Portfolio extends Component {
@@ -56,35 +57,33 @@ class Portfolio extends Component {
     }
   }
 
-
   render() {
-    const settings = {
-      dots: false,
-      arrow: false,
-      infinite: true,
-      speed: 500,
-      slidesToShow: 1,
-      slidesToScroll: 1
-    };
     return (
       <Container>
         <PrimaryHeader>Projects</PrimaryHeader>
         <ProjectsWrapper>
           {this.state.projects.map((project, k) =>
             <Project key={k}>
-              <Slider {...settings}>
+              <Carousel
+                infiniteLoop={true}
+                autoPlay={true}
+                interval={1000}
+                swipeable={true}
+                showArrows={false}
+                showStatus={false}
+                showIndicators={false}
+                showThumbs={false}
+              >
                 <div>
-                <ProjectImg src={process.env.PUBLIC_URL + project.img[0]}/>
+                  <img src={process.env.PUBLIC_URL + project.img[0] } alt='project'  />
                 </div>
                 <div>
-                <ProjectImg src={process.env.PUBLIC_URL + project.img[1]}/>
+                  <img src={process.env.PUBLIC_URL + project.img[1] } alt='project'  />
                 </div>
                 <div>
-                <ProjectImg src={process.env.PUBLIC_URL + project.img[2]}/>
+                  <img src={process.env.PUBLIC_URL + project.img[2] } alt='project'  />
                 </div>
-              </Slider>
-
-              {/*  */}
+              </Carousel>
             </Project>
           )}
         </ProjectsWrapper>

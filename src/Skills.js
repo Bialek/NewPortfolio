@@ -54,7 +54,6 @@ class Skills extends Component {
           '/images/skills/icon12.png',
           'Unit tests'
         ],
-        
       ]
     }
   }

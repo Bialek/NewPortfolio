@@ -75,16 +75,16 @@ export const CertificateImg = styled.img`
 export const ProjectsWrapper = styled.div`
     overflow-y: scroll;
     height: 80vh;
-    &::-webkit-scrollbar { 
+    max-width: 100%;
+    /* &::-webkit-scrollbar { 
         display: none; 
-    }
+    } */
 `
 
 export const ProjectImg = styled.img`
-
-
+    width: 300px;
 `
 
 export const Project = styled.div`
-
+    width: 100%;
 ` 
