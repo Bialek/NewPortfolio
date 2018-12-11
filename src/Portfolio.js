@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from 'react-responsive-carousel';
-import { Container, PrimaryHeader, ProjectsWrapper, Project, ProjectImg } from './Styled/App';
+
+import { Container, PrimaryHeader, ProjectsWrapper, Project, ProjectSlider } from './Styled/App';
 
 class Portfolio extends Component {
   constructor() {
@@ -64,7 +63,7 @@ class Portfolio extends Component {
         <ProjectsWrapper>
           {this.state.projects.map((project, k) =>
             <Project key={k}>
-              <Carousel
+              <ProjectSlider
                 infiniteLoop={true}
                 autoPlay={true}
                 interval={1000}
@@ -83,7 +82,7 @@ class Portfolio extends Component {
                 <div>
                   <img src={process.env.PUBLIC_URL + project.img[2] } alt='project'  />
                 </div>
-              </Carousel>
+              </ProjectSlider>
             </Project>
           )}
         </ProjectsWrapper>

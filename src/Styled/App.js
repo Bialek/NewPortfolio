@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from 'react-responsive-carousel';
 
 export const Page = styled.div`
     display: flex;
@@ -76,15 +78,26 @@ export const ProjectsWrapper = styled.div`
     overflow-y: scroll;
     height: 80vh;
     max-width: 100%;
-    /* &::-webkit-scrollbar { 
-        display: none; 
-    } */
+    &::-webkit-scrollbar {
+        width: 12px;
+    } 
+    &::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    } 
+    &::-webkit-scrollbar-thumb {
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    }
 `
 
-export const ProjectImg = styled.img`
+export const ProjectSlider = styled(Carousel)`
     width: 300px;
+    display: inline-flex;
 `
 
 export const Project = styled.div`
     width: 100%;
+    display: flex;
+    padding: 15px;
+    margin: 15px 0;
+    border-bottom: 1px #535353 solid;
 ` 
