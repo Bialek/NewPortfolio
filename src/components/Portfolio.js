@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Container, PrimaryHeader, SecondaryHeader, Paragraf } from './Styled/App';
-import { ProjectsWrapper, Project, ProjectSlider, ProjectContent, ProjectLink } from './Styled/Project';
+import { Container, PrimaryHeader, SecondaryHeader, Paragraf } from '../Styled/App';
+import { ProjectsWrapper, Project, ProjectSlider, ProjectContent, ProjectLink } from '../Styled/Project';
 
 class Portfolio extends Component {
   constructor() {

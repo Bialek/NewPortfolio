@@ -7,4 +7,7 @@ export const GlobalStyle = createGlobalStyle`
 		box-sizing: border-box;
 		outline: none;
 	}
+	svg {
+		margin: 0 10px;
+	}
 `
