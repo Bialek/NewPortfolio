@@ -9,37 +9,37 @@ class Portfolio extends Component {
     this.state = {
       projects : [
         { 
-          name: 'Countries Database',
-          description: 'Project from kodilla bootcamp. I added API, Styled Component and favorite site. I extend database of coutries from 8 to more that 250',
+          name: 'Wyszukiwarka Zdjęć Unsplash',
+          description: 'Projekt zbudowany od podstaw. Aplikacja służy do tworzenia katalogów zdjęć po przez wyszukiwaną fraze. Zdjęcia w katalogu może sortować według trzech wartości. Korzystamy tutaj z Api z strony Unsplash. W projekcje wykorzystałem: React, Redux, Redux-thunk oraz Styled-component.',
           img: [
-            "/images/projects/Countries-Database/1.jpg",
-            "/images/projects/Countries-Database/1.jpg",
-            "/images/projects/Countries-Database/1.jpg"
+            "/images/projects/unsplash-images-search-engine/1.jpg",
+            "/images/projects/unsplash-images-search-engine/2.jpg",
+            "/images/projects/unsplash-images-search-engine/3.jpg"
           ],
-          github: "https://github.com/Bialek/Countries-Database",
-          files: "/projects/Countries-Database/index.html"
+          github: "https://github.com/Bialek/unsplash-images-search-engine",
+          files: "/projects/unsplash-images-search-engine/index.html"
         },
         { 
           name: 'Baza danych państw ',
-          description: 'Jeden z projektów zrealizowanych na Bootcampie Kodilla. Do projektu dodałem asynchroniczne pobieranie danych z zewnetrzne Api, przez co ilość państw wzrosła z 8 do ponad 250. Dodałem również style z zrealizowane przy użyciu Styled-Component oraz podstrone z ulubionymi państwami.',
+          description: 'Jeden z projektów zrealizowanych na Bootcampie Kodilla. Do projektu dodałem asynchroniczne pobieranie danych z zewnetrznego Api, przez co ilość państw wzrosła z 8 do ponad 250. Dodałem również style z zrealizowane przy użyciu Styled-Component oraz podstrone z ulubionymi państwami.',
           img: [
             "/images/projects/Countries-Database/1.jpg",
-            "/images/projects/Countries-Database/1.jpg",
-            "/images/projects/Countries-Database/1.jpg"
+            "/images/projects/Countries-Database/2.jpg",
+            "/images/projects/Countries-Database/3.jpg"
           ],
           github: "https://github.com/Bialek/Countries-Database",
           files: "/projects/Countries-Database/index.html"
         },
         { 
-          name: 'Countries Database',
-          description: 'Project from kodilla bootcamp. I added API, Styled Component and favorite site. I extend database of coutries from 8 to more that 250',
+          name: 'Photo-layout',
+          description: 'Moja autorska wersja strony całkowicie odmienna od pliku PSD który dostałem, strone zrealizowałem z biblioteką Fullpage.js, pozostałe elementy dynamiczne wykonane w jQuery. Style wykonane w Scss. Stylą brakuje metodologii :(',
           img: [
-            "/images/projects/Countries-Database/1.jpg",
-            "/images/projects/Countries-Database/1.jpg",
-            "/images/projects/Countries-Database/1.jpg"
+            "/images/projects/Photo-layout-fullpage.js/1.jpg",
+            "/images/projects/Photo-layout-fullpage.js/2.jpg",
+            "/images/projects/Photo-layout-fullpage.js/3.jpg"
           ],
-          github: "https://github.com/Bialek/Countries-Database",
-          files: "/projects/Countries-Database/index.html"
+          github: "https://github.com/Bialek/Photo-layout-fullpage.js",
+          files: "/projects/Photo-layout-fullpage.js/index.html"
         },
         { 
           name: 'Countries Database',
@@ -70,7 +70,7 @@ class Portfolio extends Component {
   render() {
     return (
       <div>
-        <PrimaryHeader>Projects</PrimaryHeader>
+        <PrimaryHeader>Projekty</PrimaryHeader>
         <ProjectsWrapper>
           {this.state.projects.map((project, k) =>
             <Project key={k}>
@@ -79,7 +79,7 @@ class Portfolio extends Component {
                 <ProjectSlider
                   infiniteLoop={true}
                   autoPlay={true}
-                  interval={1000}
+                  interval={1500}
                   swipeable={true}
                   showArrows={false}
                   showStatus={false}

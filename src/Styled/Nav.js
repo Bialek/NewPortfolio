@@ -114,6 +114,7 @@ export const NavLink = styled(Link)`
 `
 
 export const NavLogo = styled.div`
+    display: flex;
     flex-direction: column;   
     margin-bottom: 15px;
     transform: ${props => props.open ? 'translate(0%)' : 'translate(-100%)'};

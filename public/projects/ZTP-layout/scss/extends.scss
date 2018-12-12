@@ -1,0 +1,23 @@
+%firstLetter {
+    &:first-letter {
+        text-transform: uppercase;
+    }
+}
+
+%borderBottom {
+    &:after {
+        position: absolute;
+        content: "";
+        width: 110%;
+        height: 1px;
+        left: -5%;
+        bottom: 0;
+        background-color: #3b3b3b;
+    }
+    @media screen and (max-width: 1280px) {
+        &:after {
+            width: 100%;
+            left: 0;
+        }
+    }
+}

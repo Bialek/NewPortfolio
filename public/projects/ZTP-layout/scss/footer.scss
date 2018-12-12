@@ -1,0 +1,255 @@
+@import './variable.scss';
+@import './extends.scss';
+
+
+
+.newsletter {
+    background-color: $primaryColor;
+    margin: 0 -15px;
+    z-index: 1;
+    position: relative;
+    padding: 20px;
+    &__img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 2;
+    }
+    [class*="col-md-"] {
+        z-index: 3;
+    }
+    &__header {
+        color: #fff;
+        font-size: 1.1em;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin: 0 0 20px 0;
+    }
+    &__input {
+        width: 210px;
+        height: 40px;
+        margin: 0 20px 20px 0;
+        padding: 15px;
+        border: none;
+        border: 1px solid $primaryColor;
+    }
+    &__input::placeholder, &__link {
+        font-family: $fontBook;
+    }
+    &__text {
+        color: #fff;
+        font-family: "Gotham - Book";
+        font-size: .85em;
+        font-weight: 400;
+        margin-bottom: 20px;
+        display: inline-flex;
+        &--bold {
+            margin-bottom: 0;
+        }
+    }
+    &__link {
+        text-decoration: underline;
+        color: inherit;
+        &:hover {
+            color: #111;
+        }
+    }
+    &__icon {
+        margin-right: 7px;
+    }
+}
+
+.footer {
+    margin: 0 -15px;
+    position: relative;
+    background-color: #111;
+    z-index: 1;
+    &__wrapper{
+        z-index: 99;
+    }
+    &__img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        object-fit: cover;
+        object-position: right;
+        @media screen and (max-width: 768px){
+            height: 50%;
+        }
+    } 
+    &__links {
+        position: relative;
+        @extend %borderBottom;
+        width: 100%;
+    }
+    &__link {
+        color: #fff;
+        font-size: .75em;
+        font-weight: 500;
+        line-height: 60px;
+        text-transform: uppercase;
+        padding-left: 46px;
+        position: relative;
+        transition: all ease-in-out .3s;
+        display: inline-flex;
+        &:hover {
+            color: $primaryColor;
+        }
+        &:after {
+            position: absolute;
+            content: "";
+            top: 20%; 
+            right: -23px;
+            height: 60%;
+            width: 2px;
+            background-color: #3b3b3b;
+        }
+        &:last-child::after {
+            display: none;
+        }
+        @media screen and (max-width: 576px) {
+            display: flex;
+            &:after {
+                left: 20px;
+            }
+            &:last-child::after {
+                display: block; 
+            }
+        } 
+    }
+}
+
+.gifts {
+    padding-bottom: 23px;
+    margin-bottom: 23px;
+    position: relative;
+    @extend %borderBottom;
+    &__header {
+        color: $primaryColor;
+        font-family: Gotham;
+        font-size: 1.07em;
+        font-weight: 700;
+        text-transform: uppercase;
+        width: 90%;
+    }
+    &__column {
+        display: flex;
+        flex-direction: column;
+    }
+    &__link {
+        @extend %firstLetter;
+        color: #fff;
+        font-family: "Gotham - Book";
+        font-size: .82em;
+        font-weight: 400;
+        line-height: 22px;  
+        justify-content: flex-start;
+        margin-bottom: 6px;
+        transition: all ease-in-out .3s;
+        &:hover {
+            color: $primaryColor;
+        }
+        @media screen and (max-width: 576px) {
+            align-self: center;
+        }
+    }
+}
+
+.contact {
+    margin-bottom: 23px;
+    padding-bottom: 23px;
+    position: relative;
+    @extend %borderBottom;
+    &__header {
+        color: $primaryColor;
+        font-family: Gotham;
+        font-size: 1.07em;
+        font-weight: 700;
+        text-transform: uppercase;
+        @media screen and (max-width: 992px) {
+            margin: 30px auto;
+        }
+    }
+    &__item {
+        display: inline-flex;
+        align-self: center;
+        color: #fff;
+        transition: all ease-in-out .3s;
+        &:hover {
+            color: $primaryColor;
+        }
+    }
+    &__column {
+        display: inline-flex;
+        justify-content: space-between;
+        align-self: center;
+        position: relative;
+        &:after, &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            height: 55px;
+            width: 1px;
+            background-color: #3b3b3b;
+        }
+        &:after {
+            right: 57%;
+        }
+        &:before {
+            left: 0%;            
+        }
+        &:first-child:before {
+            display: none;
+        }
+        @media screen and (max-width: 768px) {
+            display: flex;
+            flex-direction: column;
+            &:before, &:after {
+                display: none;
+            }
+        }
+    }
+    &__text {
+        color: inherit;
+        font-family: "Gotham - Book";
+        font-size: .94em;
+        font-weight: 300;
+        &:first-child {
+            font-family: Gotham;
+            font-weight: 700;
+        }
+    }
+    &__icon {
+        padding: 0 20px;
+    }
+    &__link {
+        color: inherit;
+        font-family: Gotham;
+        font-size: .94em;
+        font-weight: 700;
+        padding: 20px 90px 27px 0;
+        @media screen and (max-width: 1200px) {
+            padding: 20px 0 27px;
+        }
+    }
+}
+
+.note {
+    height: 170px;
+    &__column {
+        display: inline-flex;
+        padding-bottom: 30px;
+        &:last-child {
+            justify-content: flex-end;
+        }
+        @media screen and (max-width: 768px) {
+            justify-content: center;
+            &:last-child {
+                justify-content: center;
+            }
+        }
+    }
+}

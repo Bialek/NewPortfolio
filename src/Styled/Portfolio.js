@@ -46,6 +46,7 @@ export const ProjectLink = styled.a`
     padding: 13px 20px;
     color: rgba(0,0,0,0.6);
     text-decoration: none;
+    font-size: 1.3em;
     border-radius: 20px;
     transition: all ease-in-out .2s;
     svg {

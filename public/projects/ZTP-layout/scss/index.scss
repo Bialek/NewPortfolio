@@ -1,0 +1,21 @@
+
+@import './variable.scss';
+
+* {
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    font-family: $primaryfont;
+}
+
+body {
+    margin: 0 15px;
+}
+
+p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
