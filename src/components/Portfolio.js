@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Container, PrimaryHeader, SecondaryHeader, Paragraf } from '../Styled/App';
-import { ProjectsWrapper, Project, ProjectSlider, ProjectContent, ProjectLink } from '../Styled/Project';
+import { PrimaryHeader, SecondaryHeader, Paragraf } from '../Styled/App';
+import { ProjectsWrapper, Project, ProjectSlider, ProjectContent, ProjectLink } from '../Styled/Portfolio';
 
 class Portfolio extends Component {
   constructor() {
@@ -69,7 +69,7 @@ class Portfolio extends Component {
 
   render() {
     return (
-      <Container>
+      <div>
         <PrimaryHeader>Projects</PrimaryHeader>
         <ProjectsWrapper>
           {this.state.projects.map((project, k) =>
@@ -112,7 +112,7 @@ class Portfolio extends Component {
             </Project>
           )}
         </ProjectsWrapper>
-      </Container>
+      </div>
     );
   }
 }

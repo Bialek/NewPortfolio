@@ -3,6 +3,24 @@ import styled from 'styled-components';
 export const Page = styled.div`
     display: flex;
     position: relative;
+    height: 100vh;
+    overflow: hidden;
+`
+
+export const Container = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 94vh;  
+    @media screen and (max-width: 900px) {
+        display: block;
+        overflow-y: scroll;
+    }
+    @media screen and (max-width: 500px) {
+        height: 99vh;
+        
+        display: block;
+    }
 `
 
 export const PageBackground = styled.img`
@@ -17,23 +35,20 @@ export const PageBackground = styled.img`
 
 export const MainContent = styled.div`
     width: 100%;
-`
-
-export const Container = styled.div`
     background-color: rgba(166, 166, 166, 0.7);
     height: 100%;
     text-align: center;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    padding: 3vh;
+    @media screen and (max-width: 500px) {
+        padding: 1vh;
+    }
 `
 
 export const PrimaryHeader = styled.h1`
     color: #fff;
     margin-bottom: 20px;
     text-align: center;
-    font-size: 1.5em;
+    font-size: 2em;
     font-weight: 900;
 `
 
@@ -41,12 +56,13 @@ export const SecondaryHeader = styled.h2`
     color: #fff;
     margin-bottom: 20px;
     text-align: center;
-    font-size: 1.3em;
+    font-size: 1.5em;
     font-weight: 700;
 `
 
 export const Paragraf = styled.p`
     color: #fff;
+    font-size: 1.2em;
     margin-bottom: 10px;
     text-decoration: none;
 `
@@ -55,6 +71,12 @@ export const SkillWrapper = styled.div`
     width: 15%;
     display: inline-block;
     margin: 20px 0 ;
+    @media screen and (max-width: 900px) {
+        width: 30%;
+    }
+    @media screen and (max-width: 900px) {
+        width: 50%;
+    }
 `
 
 export const Certificate = styled.a`
@@ -63,7 +85,12 @@ export const Certificate = styled.a`
     display: inline-flex;
     flex-direction: column;
     width: 25%;
-    
+    @media screen and (max-width: 900px) {
+        width: 50%;
+    }
+    @media screen and (max-width: 500px) {
+        width: 100%;
+    }
 `
 
 export const CertificateImg = styled.img`

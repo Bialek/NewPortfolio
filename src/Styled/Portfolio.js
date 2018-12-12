@@ -4,24 +4,22 @@ import { Carousel } from 'react-responsive-carousel';
 
 export const ProjectsWrapper = styled.div`
     overflow-y: scroll;
-    height: 80vh;
+    height: calc(100vh - 100px);
     max-width: 100%;
-    &::-webkit-scrollbar {
-        width: 12px;
-    } 
-    &::-webkit-scrollbar-track {
-        box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
-    } 
-    &::-webkit-scrollbar-thumb {
-       box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
-    }
 `
 
 export const ProjectSlider = styled(Carousel)`
     width: 300px;
     margin-right: 15px;
+    @media screen and (max-width: 500px) {
+        width: auto;
+    }
     img {
         min-width: 300px;
+        @media screen and (max-width: 500px) {
+            min-width: auto;
+            width: 100%;
+        }
     }
 `
 
@@ -35,6 +33,9 @@ export const Project = styled.div`
 export const ProjectContent = styled.div`
     display: flex;
     align-items: center;
+    @media screen and (max-width: 900px) {
+        flex-direction: column-reverse;
+    }
 `
 
 export const ProjectLink = styled.a`

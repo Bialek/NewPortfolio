@@ -3,37 +3,37 @@ import { Link } from 'react-router-dom';
 
 
 export const NavWrapper = styled.div`
-    width: 350px;
+    min-width: ${props => props.open ? '320px' : '55px'};
     height: 100vh;
     z-index: 2;
     font-size: .9em;
     color: #fff;
     background-color: rgba(26, 82, 118, 0.7);
-    padding: 10px;
+    padding: ${props => props.open ? '10px' : '0'};
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     box-shadow: 3px 0px 5px 0px rgba(0,0,0,0.75);
+    transition: all ease-in-out .3s; 
 `
 export const NavControl = styled.div`
+    align-self: flex-end;
     width: 30px;
     height: 30px;
     position: relative;
-    transition: .1s;
-    margin: 10px 10px;
+    margin-right: 10px;
     cursor: pointer;
     display: inline-block;
+    transform: ${props => props.open ? 'rotate(180deg)' : 'rotate(0deg)'};
+    transition: ${props => props.open ? '.2s ease-in-out' : '.1s'} ;
     span {
         width: 5px;
         height: 5px;
         background-color: #fff;
         display: block;
         border-radius: 50%;
-    }
-    &:hover span {
-        transform: scale(1.3);
-        transition: 350ms cubic-bezier(.8, .5, .2, 1.4);
-        box-shadow: 0px 2px 3px rgba(0,0,0,.4); 
+        transform: ${props => props.open ? 'rotate(0deg)' : 'rotate(180deg)'};
+        transition: .5s ease-in-out;
     }
     span:nth-child(1) {
         position: absolute;
@@ -42,9 +42,8 @@ export const NavControl = styled.div`
     }
     span:nth-child(2) {
         position: absolute;
-        left: 12px;
-        top: 0;
-
+        left: ${props => props.open ? '6px' : '12px'};
+        top: ${props => props.open ? '6px' : '0'};
     }
     span:nth-child(3) {
         position: absolute;
@@ -53,8 +52,8 @@ export const NavControl = styled.div`
     }
     span:nth-child(4) {
         position: absolute;
-        left: 0;
-        top: 12px;
+        left: ${props => props.open ? '6px' : '0'};
+        top: ${props => props.open ? '18px' : '12px'};
     }
     span:nth-child(5) {
         position: absolute;
@@ -63,8 +62,8 @@ export const NavControl = styled.div`
     }
     span:nth-child(6) {
         position: absolute;
-        right: 0px;
-        top: 12px;
+        right: ${props => props.open ? '6px' : '0'};
+        top: ${props => props.open ? '6px' : '12px'};
     }
     span:nth-child(7) {
         position: absolute;
@@ -75,6 +74,8 @@ export const NavControl = styled.div`
         position: absolute;
         left: 12px;
         bottom: 0px;
+        left: ${props => props.open ? '18px' : '12px'};
+        bottom: ${props => props.open ? '6px' : '0'};
     }
     span:nth-child(9) {
         position: absolute;
@@ -103,18 +104,24 @@ export const NavLink = styled(Link)`
     background-position: 0 100%;
     padding-bottom: 10px;
     transition: all ease-in-out .3s;
-    display: flex;
+    justify-content: center;
     width: 80%;
     margin: 0 auto;
+    display: ${props => props.open === false ? 'none' : 'flex'};
     &:hover {
         background-size: 100% 2px;
     }
 `
 
 export const NavLogo = styled.div`
-    display: flex;
     flex-direction: column;   
-    margin-bottom: 15px;  
+    margin-bottom: 15px;
+    transform: ${props => props.open ? 'translate(0%)' : 'translate(-100%)'};
+    transition: all ease-in-out .3s; 
+`
+
+export const NavText = styled.span`
+    display: ${props => props.open ? 'flex' : 'none '};
 `
 
 export const NavImg = styled.img`
@@ -129,6 +136,9 @@ export const NavImg = styled.img`
 export const NavContact = styled.div`
     display: flex;
     justify-content: space-around;
+    flex-direction: ${props => props.open ? 'row' : 'column'};
+    height: ${props => props.open ? '50px' : '250px' };
+    padding: 7px;
 `
 
 export const NavIcon = styled.a`
