@@ -42,26 +42,26 @@ class Portfolio extends Component {
           files: "/projects/Photo-layout-fullpage.js/index.html"
         },
         { 
-          name: 'Countries Database',
-          description: 'Project from kodilla bootcamp. I added API, Styled Component and favorite site. I extend database of coutries from 8 to more that 250',
+          name: 'ZTP-layout',
+          description: 'Zadanie rektutacyjne, zrealizowane na podstawie dostarczonego pliku PSD. Style wykonane w Sass, metodologia BEM. Projekt poddany walidacji. Framework JavaScript to jQuery. Na projekt miałem zaledwie 4 dni.',
           img: [
-            "/images/projects/Countries-Database/1.jpg",
-            "/images/projects/Countries-Database/1.jpg",
-            "/images/projects/Countries-Database/1.jpg"
+            "/images/projects/ZTP-layout/1.jpg",
+            "/images/projects/ZTP-layout/2.jpg",
+            "/images/projects/ZTP-layout/3.jpg"
           ],
-          github: "https://github.com/Bialek/Countries-Database",
-          files: "/projects/Countries-Database/index.html"
+          github: "https://github.com/Bialek/ZTP-layout",
+          files: "/projects/ZTP-layout/index.html"
         },
         { 
-          name: 'Countries Database',
-          description: 'Project from kodilla bootcamp. I added API, Styled Component and favorite site. I extend database of coutries from 8 to more that 250',
+          name: 'Chat',
+          description: 'Chat pozwala na komunikacje z osobami znajdującymi się na stronie. Najłatwiejszym sposobem do przetestowania są dwie oddzielne karty w przeglądarce. Aplikacja korzysta z świetnego Api jakim jest Socket.io, pozwalajacy na stałą komunikacje z serwerem. Back-end wykonany w Node.js a projekty udostępniony na Heroku.',
           img: [
-            "/images/projects/Countries-Database/1.jpg",
-            "/images/projects/Countries-Database/1.jpg",
-            "/images/projects/Countries-Database/1.jpg"
+            "/images/projects/Chat/1.jpg",
+            "/images/projects/Chat/2.jpg",
+            "/images/projects/Chat/3.jpg"
           ],
-          github: "https://github.com/Bialek/Countries-Database",
-          files: "/projects/Countries-Database/index.html"
+          github: "https://github.com/Bialek/Kodilla-Bootcamp/tree/master/module-18-chat",
+          files: "https://limitless-fjord-29023.herokuapp.com/"
         }
       ]
     }
