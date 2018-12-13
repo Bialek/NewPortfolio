@@ -18,71 +18,38 @@ export const NavWrapper = styled.div`
     padding-top: ${props => props.open ? '80px' : '120px'};
 `
 export const NavControl = styled.div`
-    align-self: flex-end;
-    width: 30px;
+    width: 35px;
     height: 30px;
+    display: inline-block;
     position: absolute;
     top: 20px;
     right: 11px;
     cursor: pointer;
-    display: inline-block;
-    transform: ${props => props.open ? 'rotate(180deg)' : 'rotate(0deg)'};
     transition: ${props => props.open ? '.2s ease-in-out' : '.1s'} ;
     span {
-        width: 5px;
-        height: 5px;
+        width:100%;
+        height: 4px;
         background-color: #fff;
-        display: block;
-        border-radius: 50%;
+        border-radius: 2px;
+        position: absolute;
         transform: ${props => props.open ? 'rotate(0deg)' : 'rotate(180deg)'};
         transition: .5s ease-in-out;
     }
     span:nth-child(1) {
-        position: absolute;
-        left: 0;
-        top: 0;
+        top: ${props => props.open ? '13px' : '0'};
+        left: 0px;
+        transform: ${props => props.open ? 'rotate(45deg)' : 'rotate(0)'};
     }
     span:nth-child(2) {
-        position: absolute;
-        left: ${props => props.open ? '6px' : '12px'};
-        top: ${props => props.open ? '6px' : '0'};
+        top: 13px;
+        left: 0px;
+        transform: ${props => props.open ? 'scale(.1)' : 'scale(1)'};
     }
     span:nth-child(3) {
-        position: absolute;
-        right: 0;
-        top: 0;
-    }
-    span:nth-child(4) {
-        position: absolute;
-        left: ${props => props.open ? '6px' : '0'};
-        top: ${props => props.open ? '18px' : '12px'};
-    }
-    span:nth-child(5) {
-        position: absolute;
-        left: 12px;
-        top: 12px;
-    }
-    span:nth-child(6) {
-        position: absolute;
-        right: ${props => props.open ? '6px' : '0'};
-        top: ${props => props.open ? '6px' : '12px'};
-    }
-    span:nth-child(7) {
-        position: absolute;
+        bottom:0px;
         left: 0px;
-        bottom: 0px;
-    }
-    span:nth-child(8) {
-        position: absolute;
-        left: 12px;
-        bottom: 0px;
-        left: ${props => props.open ? '18px' : '12px'};
-        bottom: ${props => props.open ? '6px' : '0'};
-    }
-    span:nth-child(9) {
-        position: absolute;
-        right: 0px;
-        bottom: 0px;
+        transform: ${props => props.open ? 'rotate(-45deg)' : 'rotate(0)'};
+        top: ${props => props.open ? '13px' : 'auto'};
     }
 `
 

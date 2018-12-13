@@ -8,7 +8,7 @@ class Nav extends Component {
     constructor() {
         super();
         this.state = {
-            open: false,
+            open: true,
         }
     }
 
@@ -20,12 +20,6 @@ class Nav extends Component {
         return (
             <NavWrapper open={this.state.open}>
                 <NavControl open={this.state.open} onClick={this.onClickHandler}>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
                     <span></span>
                     <span></span>
                     <span></span>
