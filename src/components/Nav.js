@@ -56,14 +56,6 @@ class Nav extends Component {
                         </NavLink>
                     </NavItem>
                 </NavList>
-                <NavList>
-                    <NavItem>
-                        <NavLink to="/cv">
-                            <FontAwesomeIcon icon ="file-pdf" />
-                            <NavText open={this.state.open}>CV</NavText>
-                        </NavLink> 
-                    </NavItem>
-                    </NavList>
                 <NavContact open={this.state.open}>
                     <NavIcon href="tel:607846422">
                         <FontAwesomeIcon icon="mobile-alt"/>

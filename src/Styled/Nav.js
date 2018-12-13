@@ -15,7 +15,7 @@ export const NavWrapper = styled.div`
     box-shadow: 3px 0px 5px 0px rgba(0,0,0,0.75);
     transition: all ease-out .25s; 
     position:relative;
-    padding-top: ${props => props.open ? '70px' : '120px'};
+    padding-top: ${props => props.open ? '80px' : '120px'};
 `
 export const NavControl = styled.div`
     align-self: flex-end;
@@ -23,7 +23,7 @@ export const NavControl = styled.div`
     height: 30px;
     position: absolute;
     top: 20px;
-    right: 10px;
+    right: 11px;
     cursor: pointer;
     display: inline-block;
     transform: ${props => props.open ? 'rotate(180deg)' : 'rotate(0deg)'};
@@ -88,7 +88,7 @@ export const NavControl = styled.div`
 
 export const NavList = styled.ul`
     list-style: none;
-    margin-bottom: 50px;
+    margin-top: 30px;
 `
 
 export const NavItem = styled.li`
