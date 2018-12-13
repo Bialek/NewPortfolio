@@ -60,7 +60,7 @@ class Skills extends Component {
   render() {
     return (
       <Container>
-        <PrimaryHeader>Skills</PrimaryHeader>
+        <PrimaryHeader>Umiejetności</PrimaryHeader>
           <div>
             {this.state.skillIcons.map((skill, k) => (
               <SkillWrapper key={k}>
@@ -70,7 +70,7 @@ class Skills extends Component {
             ))}
           </div>
   
-        <SecondaryHeader>Certificates</SecondaryHeader>
+        <SecondaryHeader>Certyfikaty</SecondaryHeader>
           <div>
             <Certificate href={process.env.PUBLIC_URL + '/images/certificate/kodilla.jpg'} rel='noopener noreferrer' target='_blank'>
               Kodilla Bootcamp

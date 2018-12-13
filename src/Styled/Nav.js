@@ -121,6 +121,9 @@ export const NavLogo = styled.div`
     min-width: 230px;
     flex-direction: column;   
     margin-bottom: 15px;
+    @media screen and (max-height: 600px) {
+        display:none;
+    }
 `
 
 export const NavText = styled.span`
@@ -148,6 +151,9 @@ export const NavContact = styled.div`
     margin: 0 auto;
     left: 0;
     right: 0;
+    @media screen and (max-height: 400px) {
+        display: ${props => props.open ? 'flex' : 'none'};
+    }
 `
 
 export const NavIcon = styled.a`
