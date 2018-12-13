@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 
 export const NavWrapper = styled.div`
-    min-width: ${props => props.open ? '320px' : '55px'};
+    min-width: ${props => props.open ? '300px' : '55px'};
     height: 100vh;
     z-index: 2;
     font-size: .9em;
@@ -12,16 +12,18 @@ export const NavWrapper = styled.div`
     padding: ${props => props.open ? '10px' : '0'};
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     box-shadow: 3px 0px 5px 0px rgba(0,0,0,0.75);
-    transition: all ease-in-out .3s; 
+    transition: all ease-out .25s; 
+    position:relative;
+    padding-top: ${props => props.open ? '70px' : '120px'};
 `
 export const NavControl = styled.div`
     align-self: flex-end;
     width: 30px;
     height: 30px;
-    position: relative;
-    margin-right: 10px;
+    position: absolute;
+    top: 20px;
+    right: 10px;
     cursor: pointer;
     display: inline-block;
     transform: ${props => props.open ? 'rotate(180deg)' : 'rotate(0deg)'};
@@ -86,6 +88,7 @@ export const NavControl = styled.div`
 
 export const NavList = styled.ul`
     list-style: none;
+    margin-bottom: 50px;
 `
 
 export const NavItem = styled.li`
@@ -105,9 +108,9 @@ export const NavLink = styled(Link)`
     padding-bottom: 10px;
     transition: all ease-in-out .3s;
     justify-content: center;
-    width: 80%;
+    max-width: 80%;
     margin: 0 auto;
-    display: ${props => props.open === false ? 'none' : 'flex'};
+    display: ${props => props.open === false ? 'none' : 'inline-flex'};
     &:hover {
         background-size: 100% 2px;
     }
@@ -115,14 +118,14 @@ export const NavLink = styled(Link)`
 
 export const NavLogo = styled.div`
     display: flex;
+    min-width: 230px;
     flex-direction: column;   
     margin-bottom: 15px;
-    transform: ${props => props.open ? 'translate(0%)' : 'translate(-100%)'};
-    transition: all ease-in-out .3s; 
 `
 
 export const NavText = styled.span`
-    display: ${props => props.open ? 'flex' : 'none '};
+    display: ${props => props.open ? 'block' : 'none '};
+    min-width: 141px;
 `
 
 export const NavImg = styled.img`
@@ -140,6 +143,11 @@ export const NavContact = styled.div`
     flex-direction: ${props => props.open ? 'row' : 'column'};
     height: ${props => props.open ? '50px' : '250px' };
     padding: 7px;
+    position: absolute;
+    bottom: 20px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
 `
 
 export const NavIcon = styled.a`
