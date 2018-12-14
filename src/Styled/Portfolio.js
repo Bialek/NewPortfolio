@@ -6,11 +6,21 @@ export const ProjectsWrapper = styled.div`
     overflow-y: scroll;
     height: calc(100vh - 100px);
     max-width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-column-gap: 40px;
+    @media screen and (max-width: 1200px){
+        grid-template-columns: auto auto;
+    }
+    @media screen and (max-width: 900px) {
+        grid-template-columns: auto;
+    }
 `
 
 export const ProjectSlider = styled(Carousel)`
     width: 300px;
     margin-right: 15px;
+    margin-bottom: 50px;
     @media screen and (max-width: 500px) {
         width: auto;
     }
@@ -33,9 +43,7 @@ export const Project = styled.div`
 export const ProjectContent = styled.div`
     display: flex;
     align-items: center;
-    @media screen and (max-width: 900px) {
-        flex-direction: column-reverse;
-    }
+    flex-direction: column;
 `
 
 export const ProjectLink = styled.a`

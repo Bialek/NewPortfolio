@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { PrimaryHeader } from '../Styled/App';
+import { PrimaryHeader } from '../Styled/Styles';
 import { NavWrapper, NavControl, NavList, NavItem,  NavLink, NavLogo, NavText, NavImg, NavContact, NavIcon } from '../Styled/Nav';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -24,12 +24,12 @@ class Nav extends Component {
                     <span></span>
                     <span></span>
                 </NavControl>
-                <NavLink to="/" open={this.state.open}>
-                    <NavLogo open={this.state.open}>
-                        <PrimaryHeader>Białek Rafał</PrimaryHeader>
-                        <NavImg src={process.env.PUBLIC_URL + "/images/me.jpg"} alt="myPhoto"/>
-                    </NavLogo>
-                </NavLink>
+                
+                <NavLogo open={this.state.open}>
+                    <PrimaryHeader>Białek Rafał</PrimaryHeader>
+                    <NavImg src={process.env.PUBLIC_URL + "/images/me.jpg"} alt="myPhoto"/>
+                </NavLogo>
+
                 <NavList>
                     <NavItem>
                         <NavLink to="/">

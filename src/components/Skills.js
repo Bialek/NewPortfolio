@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, PrimaryHeader, SecondaryHeader, Paragraf, SkillWrapper, Certificate, CertificateImg } from '../Styled/App';
+import { Container, PrimaryHeader, SecondaryHeader, Paragraf, SkillWrapper, Certificate, CertificateImg } from '../Styled/Styles';
 
 class Skills extends Component {
   constructor(props) {

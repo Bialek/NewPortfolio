@@ -18,7 +18,6 @@ export const Container = styled.div`
     }
     @media screen and (max-width: 500px) {
         height: 99vh;
-        
         display: block;
     }
 `
@@ -65,6 +64,19 @@ export const Paragraf = styled.p`
     font-size: 1.2em;
     margin-bottom: 10px;
     text-decoration: none;
+`
+export const HomeWrapper = styled.div`
+    width: 70%;
+    margin: 0 auto;
+    @media screen and (max-width: 1200px) {
+        width: 75%;
+    }
+    @media screen and (max-width: 900px) {
+        width: 80%;
+    }
+    @media screen and (max-width: 500px) {
+        width: 100%;
+    }
 `
 
 export const SkillWrapper = styled.div`

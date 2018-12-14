@@ -9,7 +9,7 @@ import Home from './components/Home';
 import Skills from './components/Skills';
 import Portfolio from './components/Portfolio';
 
-import { Page, PageBackground, MainContent } from './Styled/App';
+import { Page, PageBackground, MainContent } from './Styled/Styles';
 
 
 class App extends Component {

@@ -15,7 +15,7 @@ export const NavWrapper = styled.div`
     box-shadow: 3px 0px 5px 0px rgba(0,0,0,0.75);
     transition: all ease-out .25s; 
     position:relative;
-    padding-top: ${props => props.open ? '80px' : '120px'};
+    padding-top: 80px;
 `
 export const NavControl = styled.div`
     width: 35px;
@@ -77,7 +77,7 @@ export const NavLink = styled(Link)`
     justify-content: center;
     max-width: 80%;
     margin: 0 auto;
-    display: ${props => props.open === false ? 'none' : 'inline-flex'};
+    display: inline-flex;
     &:hover {
         background-size: 100% 2px;
     }
@@ -85,9 +85,10 @@ export const NavLink = styled(Link)`
 
 export const NavLogo = styled.div`
     display: flex;
-    min-width: 230px;
+    min-width: 266px;
     flex-direction: column;   
     margin-bottom: 15px;
+    display: ${props => props.open === false ? 'none' : 'inline-flex'};
     @media screen and (max-height: 600px) {
         display:none;
     }
@@ -95,7 +96,7 @@ export const NavLogo = styled.div`
 
 export const NavText = styled.span`
     display: ${props => props.open ? 'block' : 'none '};
-    min-width: 141px;
+    min-width: 171px;
 `
 
 export const NavImg = styled.img`
