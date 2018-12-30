@@ -12,10 +12,7 @@ export const Container = styled.div`
     flex-direction: column;
     justify-content: space-evenly;
     height: 94vh;  
-    @media screen and (max-width: 900px) {
-        display: block;
-        overflow-y: scroll;
-    }
+    overflow-y: auto;
     @media screen and (max-width: 500px) {
         height: 99vh;
         display: block;
@@ -38,6 +35,7 @@ export const MainContent = styled.div`
     height: 100%;
     text-align: center;
     padding: 3vh;
+    padding-right: 0 !important;
     @media screen and (max-width: 500px) {
         padding: 1vh;
     }

@@ -21,7 +21,7 @@ class Portfolio extends Component {
         },
         { 
           name: 'Baza danych państw ',
-          description: 'Jeden z projektów zrealizowanych na Bootcampie Kodilla. Do projektu dodałem asynchroniczne pobieranie danych z zewnetrznego Api, przez co ilość państw wzrosła z 8 do ponad 250. Dodałem również style z zrealizowane przy użyciu Styled-Component oraz podstrone z ulubionymi państwami.',
+          description: 'Jeden z projektów zrealizowanych na Bootcampie Kodilla. Do projektu samodzielnie dodałem asynchroniczne pobieranie danych z zewnetrznego Api, przez co ilość państw wzrosła z 8 do ponad 250. Dodałem również style z zrealizowane przy użyciu Styled-Component oraz podstrone z ulubionymi państwami.',
           img: [
             "/images/projects/Countries-Database/1.jpg",
             "/images/projects/Countries-Database/2.jpg",
@@ -29,6 +29,29 @@ class Portfolio extends Component {
           ],
           github: "https://github.com/Bialek/Countries-Database",
           files: "/projects/Countries-Database/index.html"
+        },
+        { 
+          name: 'Heroku Chat Application',
+          description: 'Chat pozwala na komunikacje z osobami znajdującymi się na stronie. Najłatwiejszym sposobem do przetestowania są dwie oddzielne karty w przeglądarce. Aplikacja korzysta z świetnego Api jakim jest Socket.io, pozwalajacy na stałą komunikacje z serwerem. Przy pomocy Styled-Components stworzyłem dwa motywy, jasny i ciemny oraz automatyczne focusowania inputów po najechanu myszką.  Back-end wykonany w Node.js a projekty udostępniony na Heroku.',
+          img: [
+            "/images/projects/Chat/1.jpg",
+            "/images/projects/Chat/2.jpg",
+            "/images/projects/Chat/3.jpg"
+          ],
+          github: "https://github.com/Bialek/Heroku-Chat-Application",
+          files: "https://heroku-chat-application.herokuapp.com/"
+        },
+        {
+          name: 'Hero Rent App',
+          description: 'Aplikacja do wynajmowania superbohaterów. Wykonana w czystym JS ES6, do styly wykorzystałem SCSS i BEM. Baza danych bohaterów i zawartość koszyka jest zapisywana do LocalStorage. Projekt realizowany dla Intive Patronage.',
+          img: [
+            "/images/projects/Hero-rent/1.jpg",
+            "/images/projects/Hero-rent/2.jpg",
+            "/images/projects/Hero-rent/3.jpg",
+            "/images/projects/Hero-rent/4.jpg"
+          ],
+          github: "https://github.com/Bialek/Hero-Rent",
+          files: "https://bialek.github.io/Hero-Rent"
         },
         { 
           name: 'Photo-layout',
@@ -52,17 +75,6 @@ class Portfolio extends Component {
           github: "https://github.com/Bialek/ZTP-layout",
           files: "/projects/ZTP-layout/index.html"
         },
-        { 
-          name: 'Chat',
-          description: 'Chat pozwala na komunikacje z osobami znajdującymi się na stronie. Najłatwiejszym sposobem do przetestowania są dwie oddzielne karty w przeglądarce. Aplikacja korzysta z świetnego Api jakim jest Socket.io, pozwalajacy na stałą komunikacje z serwerem. Back-end wykonany w Node.js a projekty udostępniony na Heroku.',
-          img: [
-            "/images/projects/Chat/1.jpg",
-            "/images/projects/Chat/2.jpg",
-            "/images/projects/Chat/3.jpg"
-          ],
-          github: "https://github.com/Bialek/Kodilla-Bootcamp/tree/master/module-18-chat",
-          files: "https://limitless-fjord-29023.herokuapp.com/"
-        }
       ]
     }
   }
@@ -86,15 +98,11 @@ class Portfolio extends Component {
                   showIndicators={false}
                   showThumbs={false}
                 >
-                  <div>
-                    <img src={process.env.PUBLIC_URL + project.img[0] } alt='project'  />
+                {project.img.map((image, k) => 
+                  <div key={k}>
+                    <img src={process.env.PUBLIC_URL + image } alt='project'  />
                   </div>
-                  <div>
-                    <img src={process.env.PUBLIC_URL + project.img[1] } alt='project'  />
-                  </div>
-                  <div>
-                    <img src={process.env.PUBLIC_URL + project.img[2] } alt='project'  />
-                  </div>
+                )}
                 </ProjectSlider>
                 <div>
                 <SecondaryHeader>{project.name}</SecondaryHeader>
