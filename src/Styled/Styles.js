@@ -64,16 +64,16 @@ export const Paragraf = styled.p`
     text-decoration: none;
 `
 export const HomeWrapper = styled.div`
-    width: 70%;
+    padding: 0 20%;
     margin: 0 auto;
     @media screen and (max-width: 1200px) {
-        width: 75%;
+        padding: 0 15%;
     }
     @media screen and (max-width: 900px) {
-        width: 80%;
+        padding: 0 7%;
     }
     @media screen and (max-width: 500px) {
-        width: 100%;
+        padding: 0 2%;   
     }
 `
 
