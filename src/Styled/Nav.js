@@ -3,13 +3,13 @@ import { Link } from 'react-router-dom';
 
 
 export const NavWrapper = styled.div`
-    min-width: ${props => props.open ? '300px' : '55px'};
+    min-width: ${props => props.menuOpen ? '300px' : '55px'};
     height: 100vh;
     z-index: 2;
     font-size: .9em;
     color: #fff;
     background-color: rgba(26, 82, 118, 0.7);
-    padding: ${props => props.open ? '10px' : '0'};
+    padding: ${props => props.menuOpen ? '10px' : '0'};
     display: flex;
     flex-direction: column;
     box-shadow: 3px 0px 5px 0px rgba(0,0,0,0.75);
@@ -25,31 +25,31 @@ export const NavControl = styled.div`
     top: 20px;
     right: 11px;
     cursor: pointer;
-    transition: ${props => props.open ? '.2s ease-in-out' : '.1s'} ;
+    transition: ${props => props.menuOpen ? '.2s ease-in-out' : '.1s'} ;
     span {
         width:100%;
         height: 4px;
         background-color: #fff;
         border-radius: 2px;
         position: absolute;
-        transform: ${props => props.open ? 'rotate(0deg)' : 'rotate(180deg)'};
+        transform: ${props => props.menuOpen ? 'rotate(0deg)' : 'rotate(180deg)'};
         transition: .5s ease-in-out;
     }
     span:nth-child(1) {
-        top: ${props => props.open ? '13px' : '0'};
+        top: ${props => props.menuOpen ? '13px' : '0'};
         left: 0px;
-        transform: ${props => props.open ? 'rotate(45deg)' : 'rotate(0)'};
+        transform: ${props => props.menuOpen ? 'rotate(45deg)' : 'rotate(0)'};
     }
     span:nth-child(2) {
         top: 13px;
         left: 0px;
-        transform: ${props => props.open ? 'scale(.1)' : 'scale(1)'};
+        transform: ${props => props.menuOpen ? 'scale(.1)' : 'scale(1)'};
     }
     span:nth-child(3) {
         bottom:0px;
         left: 0px;
-        transform: ${props => props.open ? 'rotate(-45deg)' : 'rotate(0)'};
-        top: ${props => props.open ? '13px' : 'auto'};
+        transform: ${props => props.menuOpen ? 'rotate(-45deg)' : 'rotate(0)'};
+        top: ${props => props.menuOpen ? '13px' : 'auto'};
     }
 `
 
@@ -88,14 +88,14 @@ export const NavLogo = styled.div`
     min-width: 266px;
     flex-direction: column;   
     margin-bottom: 15px;
-    display: ${props => props.open === false ? 'none' : 'inline-flex'};
+    display: ${props => props.menuOpen === false ? 'none' : 'inline-flex'};
     @media screen and (max-height: 600px) {
         display:none;
     }
 `
 
 export const NavText = styled.span`
-    display: ${props => props.open ? 'block' : 'none '};
+    display: ${props => props.menuOpen ? 'block' : 'none '};
     min-width: 171px;
 `
 
@@ -111,8 +111,8 @@ export const NavImg = styled.img`
 export const NavContact = styled.div`
     display: flex;
     justify-content: space-around;
-    flex-direction: ${props => props.open ? 'row' : 'column'};
-    height: ${props => props.open ? '50px' : '250px' };
+    flex-direction: ${props => props.menuOpen ? 'row' : 'column'};
+    height: ${props => props.menuOpen ? '50px' : '250px' };
     padding: 7px;
     position: absolute;
     bottom: 20px;
@@ -120,7 +120,7 @@ export const NavContact = styled.div`
     left: 0;
     right: 0;
     @media screen and (max-height: 400px) {
-        display: ${props => props.open ? 'flex' : 'none'};
+        display: ${props => props.menuOpen ? 'flex' : 'none'};
     }
 `
 

@@ -8,6 +8,7 @@ import Nav from './components/Nav';
 import Home from './components/Home';
 import Skills from './components/Skills';
 import Portfolio from './components/Portfolio';
+import Contact from './components/Contact';
 
 import { Page, PageBackground, MainContent } from './Styled/Styles';
 
@@ -17,14 +18,14 @@ class App extends Component {
     return (
       <Router>
         <Page>
-          <PageBackground src={process.env.PUBLIC_URL + "/images/background1.gif"} alt="background" />
+          <PageBackground src={process.env.PUBLIC_URL + '/images/background1.gif'} alt='background' />
           <Nav />
           <MainContent>
-            <Route exact path="/" component={Home} />
-            <Route path="/skills" component={Skills} />
-            <Route path="/portfolio" component={Portfolio} />
+            <Route exact path='/' component={Home} />
+            <Route path='/skills' component={Skills} />
+            <Route path='/portfolio' component={Portfolio} />
+            <Route path='/contact' component={Contact} />
           </MainContent>
-
         </Page>
       </Router>
     );
