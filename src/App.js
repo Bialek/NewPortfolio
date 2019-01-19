@@ -4,6 +4,7 @@ import {
   Route
 } from 'react-router-dom';
 
+import './App.sass';
 import Nav from './components/Nav';
 import Home from './components/Home';
 import Skills from './components/Skills';
@@ -18,10 +19,10 @@ class App extends Component {
     return (
       <Router>
         <Page>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
+          <span className="stars"></span>
+          <span className="stars1"></span>
+          <span className="stars2"></span>
+          <span className="shooting-stars"></span>
           <Nav />
           <MainContent>
             <Route exact path='/' component={Home} />
