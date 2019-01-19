@@ -99,14 +99,6 @@ export const NavText = styled.span`
     min-width: 171px;
 `
 
-export const NavImg = styled.img`
-    width: 183px;
-    height: 183px;
-    border-radius: 50%;
-    object-position: top;
-    object-fit: cover;
-    margin: 0 auto 10px;
-`
 
 export const NavContact = styled.div`
     display: flex;

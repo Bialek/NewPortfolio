@@ -50,9 +50,9 @@ export const ProjectLink = styled.a`
     display: inline-flex;
     justify-content: space-between;
     margin: 20px;
-    box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    box-shadow: inset 0 0 6px rgba(255,255,255,0.3); 
     padding: 13px 20px;
-    color: rgba(0,0,0,0.6);
+    color: rgba(255,255,255,255.6);
     text-decoration: none;
     font-size: 1.3em;
     border-radius: 20px;
@@ -61,8 +61,8 @@ export const ProjectLink = styled.a`
         margin-left: 15px;
     }
     &:hover {
-        box-shadow: inset 0 0 6px rgba(0,0,0,0.7);
-        color: rgba(0,0,0,1);
+        box-shadow: inset 0 0 6px rgba(255,255,255,255.7);
+        color: rgba(255,255,255,1);
     }
     
 `

@@ -10,7 +10,7 @@ import Skills from './components/Skills';
 import Portfolio from './components/Portfolio';
 import Contact from './components/Contact';
 
-import { Page, PageBackground, MainContent } from './Styled/Styles';
+import { Page, MainContent } from './Styled/Styles';
 
 
 class App extends Component {
@@ -18,7 +18,10 @@ class App extends Component {
     return (
       <Router>
         <Page>
-          <PageBackground src={process.env.PUBLIC_URL + '/images/background1.gif'} alt='background' />
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
           <Nav />
           <MainContent>
             <Route exact path='/' component={Home} />
