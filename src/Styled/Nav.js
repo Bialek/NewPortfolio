@@ -13,9 +13,13 @@ export const NavWrapper = styled.div`
     display: flex;
     flex-direction: column;
     box-shadow: 3px 0px 5px 0px rgba(0,0,0,0.75);
-    transition: all ease-out .25s; 
+    transition: all ease-out .3s; 
     position:relative;
+    overflow: hidden;
     padding-top: 80px;
+    @media screen and (min-height: 600px) {
+        padding-top: ${props => props.menuOpen ? '200px' : '80px'};
+    }
 `
 export const NavControl = styled.div`
     width: 35px;
@@ -25,7 +29,7 @@ export const NavControl = styled.div`
     top: 20px;
     right: 11px;
     cursor: pointer;
-    transition: ${props => props.menuOpen ? '.2s ease-in-out' : '.1s'} ;
+    transition: .3s ease-in-out;
     span {
         width:100%;
         height: 4px;
@@ -75,11 +79,19 @@ export const NavLink = styled(Link)`
     padding-bottom: 10px;
     transition: all ease-in-out .3s;
     justify-content: center;
-    max-width: 80%;
+    width: 80%;
+    height: 30px;
     margin: 0 auto;
     display: inline-flex;
+    overflow: hidden;
+    position: relative;
     &:hover {
         background-size: 100% 2px;
+    }
+    svg {
+        margin-left: auto;
+        min-width: 30px;
+        margin-right: 7px;
     }
 `
 
@@ -88,17 +100,27 @@ export const NavLogo = styled.div`
     min-width: 266px;
     flex-direction: column;   
     margin-bottom: 15px;
-    display: ${props => props.menuOpen === false ? 'none' : 'inline-flex'};
+    display: flex;
+    height: 110px;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    opacity: ${props => props.menuOpen ? '1' : '0'};
     @media screen and (max-height: 600px) {
         display:none;
     }
 `
 
 export const NavText = styled.span`
-    display: ${props => props.menuOpen ? 'block' : 'none '};
+    overflow: hidden;
+    display: ${props => props.menuOpen ? 'inline-block' : 'none'};
     min-width: 171px;
+    transition: all 1s linear;
+    position: absolute;
+    left: 0;
 `
-
 
 export const NavContact = styled.div`
     display: flex;

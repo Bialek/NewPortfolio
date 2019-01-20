@@ -44,6 +44,8 @@ export const ProjectContent = styled.div`
     display: flex;
     align-items: center;
     flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
 `
 
 export const ProjectLink = styled.a`

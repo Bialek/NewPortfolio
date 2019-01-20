@@ -104,18 +104,20 @@ class Portfolio extends Component {
                   </div>
                 )}
                 </ProjectSlider>
-                <div>
-                <SecondaryHeader>{project.name}</SecondaryHeader>
+                <ProjectContent>
+                  <SecondaryHeader>{project.name}</SecondaryHeader>
                   <Paragraf>{project.description}</Paragraf>
-                  <ProjectLink href={project.github} target="_blank">
-                    Code
-                    <FontAwesomeIcon icon={["fab", "github"]} />
-                  </ProjectLink>
-                  <ProjectLink href={project.files} target="_blank">
-                    Demo
-                    <FontAwesomeIcon icon='desktop' />
-                  </ProjectLink>
-                </div>
+                  <div>
+                    <ProjectLink href={project.github} target="_blank">
+                      Code
+                      <FontAwesomeIcon icon={["fab", "github"]} />
+                    </ProjectLink>
+                    <ProjectLink href={project.files} target="_blank">
+                      Demo
+                      <FontAwesomeIcon icon='desktop' />
+                    </ProjectLink>
+                  </div>
+                </ProjectContent>
               </ProjectContent>
             </Project>
           )}

@@ -33,26 +33,26 @@ class Nav extends Component {
                 <NavList>
                     <NavItem>
                         <NavLink to='/'>
-                            <FontAwesomeIcon icon='home' />
                             <NavText menuOpen={this.state.menuOpen}>Strona Domowa</NavText>
+                            <FontAwesomeIcon icon='home' />
                     </NavLink> 
                     </NavItem>
                     <NavItem>
                         <NavLink to='/skills'>
-                            <FontAwesomeIcon icon='chart-bar' />
                             <NavText menuOpen={this.state.menuOpen}>Umiejetności</NavText>
+                            <FontAwesomeIcon icon='chart-bar' />
                         </NavLink>
                     </NavItem>
                     <NavItem>
                         <NavLink to='/portfolio'>
-                            <FontAwesomeIcon icon='laptop-code' />
                             <NavText menuOpen={this.state.menuOpen}>Projekty</NavText>
+                            <FontAwesomeIcon icon='laptop-code' />
                         </NavLink>
                     </NavItem>
                     <NavItem>
                         <NavLink to='/contact'>
-                            <FontAwesomeIcon icon={['fab', 'wpforms']} />
                             <NavText menuOpen={this.state.menuOpen}>Kontakt</NavText>
+                            <FontAwesomeIcon icon={['fab', 'wpforms']} />
                         </NavLink>
                     </NavItem>
                 </NavList>

@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 export const Page = styled.div`
     display: flex;
@@ -18,16 +18,6 @@ export const Container = styled.div`
         height: 99vh;
         display: block;
     }
-`
-
-export const PageBackground = styled.img`
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;  
-    object-fit: cover;
-    z-index: -999;
 `
 
 export const MainContent = styled.div`
@@ -115,4 +105,81 @@ export const CertificateImg = styled.img`
     max-width: 110px;
     max-height: 90px;
     margin: 20px auto;
+`
+
+function createStars(starNumber) {
+    let stars = '726px 927px #fff';
+    for (let i = 1; i < starNumber; i++) {
+        stars +=`, ${Math.floor((Math.random() * 2000))}px ${Math.floor((Math.random() * 1000))}px #fff`
+    }
+    return stars;
+}
+
+
+const movingSkyAnimation = keyframes`
+  0% {
+    transform: translateY(400px) translateX(400px)
+  }
+  100% {
+    transform: translateY(-540px) translateX(-960px)
+  }
+`
+
+const shootingStarAnimation = keyframes`
+	0% {
+		transform: translateY(-1000px) translateX(-2000px) rotate(120deg);
+		opacity: 1;
+		height: 5px;
+	}
+
+	100% {
+		transform: translateY(300px) translateX(300px) rotate(120deg);
+		opacity: 1;
+		height: 800px;
+	}
+` 
+
+export const Stars = styled.span`
+	z-index: 10;
+	width: ${props => props.starSize};
+	height: ${props => props.starSize};
+	border-radius: 50%;
+	background-color: transparent;
+    box-shadow: ${props => createStars(props.starNumber)};
+    animation: ${movingSkyAnimation} 150s linear infinite;
+	position: absolute;
+    &:after {
+        content: " ";
+        top: -300px;
+        left: -300px;
+        width: ${props => props.starSize};
+        height: ${props => props.starSize};
+        border-radius: 50%;
+        position: absolute;
+        background-color: transparent;
+        box-shadow: ${props => createStars(props.starNumber)};
+    }
+    &:before {
+        content: " ";
+        bottom: -300px;
+        right: -300px;
+        width: ${props => props.starSize};
+        height: ${props => props.starSize};
+        border-radius: 50%;
+        position: absolute;
+        background-color: transparent;
+        box-shadow: ${props => createStars(props.starNumber)};
+    }
+` 
+export const ShotingStars = styled.span`
+    z-index: 10;
+	width: 5px;
+	height: 85px;
+	border-top-left-radius: 50%;
+	border-top-right-radius: 50%;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	background: linear-gradient(to top, rgba(255, 255, 255, 0), white);
+	animation: ${shootingStarAnimation} 10s linear infinite;
 `
