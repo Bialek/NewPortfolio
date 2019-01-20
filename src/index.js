@@ -5,10 +5,10 @@ import { GlobalStyle } from './Styled/GlobalStyle';
 import { library } from '@fortawesome/fontawesome-svg-core';
 
 
-import { faEnvelope, faMobileAlt, faDesktop, faGraduationCap, faComment, faExclamationTriangle, faHome, faChartBar, faLaptopCode, faFilePdf } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faMobileAlt, faDesktop, faGraduationCap, faComment, faExclamationTriangle, faHome, faChartBar, faLaptopCode, faFilePdf, faSpinner } from '@fortawesome/free-solid-svg-icons';
 import { fab, faGithub, faLinkedinIn, faReact, faGitSquare, faWpforms } from '@fortawesome/free-brands-svg-icons';
 
-library.add(fab, faHome, faEnvelope, faGithub, faLinkedinIn, faWpforms, faGitSquare, faMobileAlt, faChartBar, faDesktop, faFilePdf, faLaptopCode, faGraduationCap, faReact, faComment, faExclamationTriangle)
+library.add(fab, faHome, faEnvelope, faGithub, faLinkedinIn, faWpforms, faGitSquare, faMobileAlt, faChartBar, faDesktop, faFilePdf, faSpinner, faLaptopCode, faGraduationCap, faReact, faComment, faExclamationTriangle)
 
 ReactDOM.render(
 		<div>

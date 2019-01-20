@@ -1,5 +1,7 @@
 import styled, { keyframes } from 'styled-components';
 
+import { rotateLoader, movingSkyAnimation, shootingStarAnimation } from './Keyframes';
+
 export const Page = styled.div`
     display: flex;
     position: relative;
@@ -52,6 +54,7 @@ export const Paragraf = styled.p`
     font-size: 1.2em;
     margin-bottom: 10px;
     text-decoration: none;
+    margin: ${props => props.contact ? '0 0 0 20px' : '0 0 10px'};
 `
 export const HomeWrapper = styled.div`
     padding: 0 20%;
@@ -107,6 +110,23 @@ export const CertificateImg = styled.img`
     margin: 20px auto;
 `
 
+export const ContactWrapper = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+`
+export const Loader = styled.div`
+    display: inline-block;
+    color: rgb(26,82,118);
+    width: 100px;
+    height: 100px;
+    font-size: 80px;
+    margin: 0 auto;
+    animation: ${rotateLoader} 1s ease-in-out infinite; 
+`
+
+
 function createStars(starNumber) {
     let stars = '726px 927px #fff';
     for (let i = 1; i < starNumber; i++) {
@@ -114,30 +134,6 @@ function createStars(starNumber) {
     }
     return stars;
 }
-
-
-const movingSkyAnimation = keyframes`
-  0% {
-    transform: translateY(400px) translateX(400px)
-  }
-  100% {
-    transform: translateY(-540px) translateX(-960px)
-  }
-`
-
-const shootingStarAnimation = keyframes`
-	0% {
-		transform: translateY(-1000px) translateX(-2000px) rotate(120deg);
-		opacity: 1;
-		height: 5px;
-	}
-
-	100% {
-		transform: translateY(300px) translateX(300px) rotate(120deg);
-		opacity: 1;
-		height: 800px;
-	}
-` 
 
 export const Stars = styled.span`
 	z-index: 10;

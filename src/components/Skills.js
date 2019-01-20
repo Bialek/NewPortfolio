@@ -1,14 +1,19 @@
 import React, { Component } from 'react';
-import { Container, PrimaryHeader, SecondaryHeader, Paragraf, SkillWrapper, Certificate, CertificateImg } from '../Styled/Styles';
-
+import { Container, PrimaryHeader, SecondaryHeader, Paragraf, SkillWrapper, Certificate, CertificateImg, Loader } from '../Styled/Styles';
+import ImageLoader from 'react-loading-image';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 class Skills extends Component {
   constructor(props) {
     super(props);
     this.state = {
       skillIcons: [
         [
-          '/images/skills/icon1.png',
-          'HTML'
+          {
+            'img': '/images/skills/icon1.png',
+            'name': 'HTML'
+          }
+          
+          
         ],
         [
           '/images/skills/icon2.png',
@@ -54,6 +59,11 @@ class Skills extends Component {
           '/images/skills/icon12.png',
           'Unit tests'
         ],
+      ],
+      certificate : [
+        {
+
+        }
       ]
     }
   }
@@ -65,7 +75,12 @@ class Skills extends Component {
             {this.state.skillIcons.map((skill, k) => (
               <SkillWrapper key={k}>
                 <Paragraf>{skill[1]}</Paragraf>
-                <img src={process.env.PUBLIC_URL + skill[0] } alt='icon' />
+                <ImageLoader
+                  src={process.env.PUBLIC_URL + skill[0]}
+                  image={props => <img {...props} alt='icon'/>}
+                  loading={() => <Loader><FontAwesomeIcon icon="spinner"/></Loader>}
+                  error={() => <div>Error</div>}       
+                />
               </SkillWrapper>
             ))}
           </div>

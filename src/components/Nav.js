@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 
 import { PrimaryHeader, SecondaryHeader } from '../Styled/Styles';
 import { NavWrapper, NavControl, NavList, NavItem,  NavLink, NavLogo, NavText, NavContact, NavIcon } from '../Styled/Nav';
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 class Nav extends Component {
     constructor() {
         super();
@@ -60,7 +60,7 @@ class Nav extends Component {
                     <NavIcon href='tel:607846422'>
                         <FontAwesomeIcon icon='mobile-alt'/>
                     </NavIcon>
-                    <NavIcon href='mailto:bialekrafal94@gmail.com'>
+                    <NavIcon href='mailto:contact@bialekrafal.pl'>
                         <FontAwesomeIcon icon='envelope'/>
                     </NavIcon>
                     <NavIcon href='https://github.com/Bialek' target='_blank'>

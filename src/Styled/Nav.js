@@ -133,7 +133,7 @@ export const NavContact = styled.div`
     margin: 0 auto;
     left: 0;
     right: 0;
-    @media screen and (max-height: 400px) {
+    @media screen and (max-height: 530px) {
         display: ${props => props.menuOpen ? 'flex' : 'none'};
     }
 `
