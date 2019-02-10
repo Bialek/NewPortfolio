@@ -55,7 +55,7 @@ class Portfolio extends Component {
         },
         { 
           name: 'Photo-layout',
-          description: 'Moja autorska wersja strony całkowicie odmienna od pliku PSD który dostałem, strone zrealizowałem z biblioteką Fullpage.js, pozostałe elementy dynamiczne wykonane w jQuery. Style wykonane w Scss. Stylą brakuje metodologii :(',
+          description: 'Moja autorska wersja strony całkowicie odmienna od pliku PSD który dostałem, strone zrealizowałem z biblioteką Fullpage.js, pozostałe elementy dynamiczne wykonane w jQuery. Style wykonane w Scss. Stylom brakuje metodologii :(',
           img: [
             "/images/projects/Photo-layout-fullpage.js/1.jpg",
             "/images/projects/Photo-layout-fullpage.js/2.jpg",

@@ -11,7 +11,7 @@ export const Page = styled.div`
 `
 
 export const Container = styled.div`
-    display: flex;
+    display: ${props => props.home ? 'block' : 'flex'};
     flex-direction: column;
     justify-content: space-evenly;
     height: 94vh;  
@@ -19,6 +19,17 @@ export const Container = styled.div`
     @media screen and (max-width: 500px) {
         height: 99vh;
         display: block;
+    }
+    padding: ${props => props.home ? '0 20%' : ''};
+    margin: 0 auto;
+    @media screen and (max-width: 1200px) {
+        padding: ${props => props.home ? '0 15%' : ''};
+    }
+    @media screen and (max-width: 900px) {
+        padding: ${props => props.home ? '0 15%' : ''};
+    }
+    @media screen and (max-width: 500px) {
+        padding: ${props => props.home ? '0 2%' : ''};
     }
 `
 
@@ -40,7 +51,6 @@ export const PrimaryHeader = styled.h1`
     font-size: 2em;
     font-weight: 900;
 `
-
 export const SecondaryHeader = styled.h2`
     color: #fff;
     margin-bottom: 20px;
@@ -52,23 +62,11 @@ export const SecondaryHeader = styled.h2`
 export const Paragraf = styled.p`
     color: #fff;
     font-size: 1.2em;
-    margin-bottom: 10px;
+    margin-bottom: ${props => props.home ? '50px' : '10px'};
     text-decoration: none;
-    margin: ${props => props.contact ? '0 0 0 20px' : '0 0 10px'};
+    margin: ${props => props.contact ? '0 0 0 20px' : ''};
 `
-export const HomeWrapper = styled.div`
-    padding: 0 20%;
-    margin: 0 auto;
-    @media screen and (max-width: 1200px) {
-        padding: 0 15%;
-    }
-    @media screen and (max-width: 900px) {
-        padding: 0 7%;
-    }
-    @media screen and (max-width: 500px) {
-        padding: 0 2%;   
-    }
-`
+
 export const HomeImg = styled.img`
     width: 183px;
     height: 183px;
@@ -112,7 +110,7 @@ export const CertificateImg = styled.img`
 
 export const ContactWrapper = styled.div`
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
     margin-bottom: 40px;
 `

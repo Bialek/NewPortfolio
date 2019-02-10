@@ -5,8 +5,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 class Contact extends Component {
   render() {
     return (
-      <Container>
-        <HomeWrapper>
+      <Container home>
+        <div>
           <PrimaryHeader>Kontakt</PrimaryHeader>
             <ContactWrapper>
               <NavIcon href='tel:607846422'>
@@ -35,7 +35,7 @@ class Contact extends Component {
 
           <SecondaryHeader>Formularz kontaktowy</SecondaryHeader>
           <SecondaryHeader>formularz w trakcie realizacji</SecondaryHeader>
-        </HomeWrapper>
+        </div>
       </Container>   
     );
   }
