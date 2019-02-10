@@ -7,63 +7,76 @@ class Skills extends Component {
     super(props);
     this.state = {
       skillIcons: [
-        [
           {
             'img': '/images/skills/icon1.png',
             'name': 'HTML'
-          }
-          
-          
-        ],
-        [
-          '/images/skills/icon2.png',
-          'CSS'
-        ],
-        [
-          '/images/skills/icon3.png',
-          'JavaScript'
-        ],
-        [
-          '/images/skills/icon4.png',
-          'SASS'
-        ],
-        [
-          '/images/skills/icon5.png',
-          'Bootstrap'
-        ],
-        [
-          '/images/skills/icon6.png',
-          'React'
-        ],
-        [
-          '/images/skills/icon7.png',
-          'Redux'
-        ],
-        [
-          '/images/skills/icon8.png',
-          'jQuery'
-        ],
-        [
-          '/images/skills/icon9.png',
-          'Node'
-        ],
-        [
-          '/images/skills/icon10.png',
-          'NPM'
-        ],
-        [
-          '/images/skills/icon11.png',
-          'Git'
-        ],
-        [
-          '/images/skills/icon12.png',
-          'Unit tests'
-        ],
+          },
+          {
+            'img': '/images/skills/icon2.png',
+            'name': 'CSS'
+          },
+          {
+            'img': '/images/skills/icon3.png',
+            'name': 'JavaScript'
+          },
+          {
+            'img': '/images/skills/icon4.png',
+            'name': 'SASS'
+          },
+          {
+            'img': '/images/skills/icon5.png',
+            'name': 'Bootstrap'
+          },
+          {
+            'img': '/images/skills/icon6.png',
+            'name': 'React'
+          },
+          {
+            'img': '/images/skills/icon7.png',
+            'name': 'Redux'
+          },
+          {
+            'img': '/images/skills/icon8.png',
+            'name': 'jQuery'
+          },
+          {
+            'img': '/images/skills/icon9.png',
+            'name': 'Node'
+          },
+          {
+            'img': '/images/skills/icon10.png',
+            'name': 'NPM'
+          },
+          {
+            'img': '/images/skills/icon11.png',
+            'name': 'Git'
+          },
+          {
+            'img': '/images/skills/icon12.png',
+            'name': 'Unit tests'
+          }         
       ],
       certificate : [
         {
-
-        }
+          'img': '/images/certificate/kodilla.jpg',
+          'miniature': '/images/certificate/kodilla-m.jpg',
+          'name': 'Kodilla Bootcamp'
+        },
+        {
+          'img': '/images/certificate/html.jpg',
+          'miniature': '/images/certificate/html-m.jpg',
+          'name': 'SoloLearn HTML'
+        },
+        {
+          'img': '/images/certificate/css.jpg',
+          'miniature': '/images/certificate/css-m.jpg',
+          'name': 'SoloLearn CSS'
+        },
+        {
+          'img': '/images/certificate/js.jpg',
+          'miniature': '/images/certificate/js-m.jpg',
+          'name': 'SoloLearn JavaScript'
+        }       
       ]
     }
   }
@@ -74,9 +87,9 @@ class Skills extends Component {
           <div>
             {this.state.skillIcons.map((skill, k) => (
               <SkillWrapper key={k}>
-                <Paragraf>{skill[1]}</Paragraf>
+                <Paragraf>{skill.name}</Paragraf>
                 <ImageLoader
-                  src={process.env.PUBLIC_URL + skill[0]}
+                  src={process.env.PUBLIC_URL + skill.img}
                   image={props => <img {...props} alt='icon'/>}
                   loading={() => <Loader><FontAwesomeIcon icon="spinner"/></Loader>}
                   error={() => <div>Error</div>}       
@@ -87,22 +100,17 @@ class Skills extends Component {
   
         <SecondaryHeader>Certyfikaty</SecondaryHeader>
           <div>
-            <Certificate href={process.env.PUBLIC_URL + '/images/certificate/kodilla.jpg'} rel='noopener noreferrer' target='_blank'>
-              Kodilla Bootcamp
-              <CertificateImg src={process.env.PUBLIC_URL + '/images/certificate/kodilla-m.jpg'} alt='Certificate' />
-            </Certificate>
-            <Certificate href={process.env.PUBLIC_URL + '/images/certificate/html.jpg'} rel='noopener noreferrer' target='_blank'>
-              SoloLearn HTML
-              <CertificateImg src={process.env.PUBLIC_URL + '/images/certificate/html-m.jpg'} alt='Certificate' />
-            </Certificate>
-            <Certificate href={process.env.PUBLIC_URL + '/images/certificate/css.jpg'} rel='noopener noreferrer' target='_blank'>
-              SoloLearn CSS
-              <CertificateImg src={process.env.PUBLIC_URL + '/images/certificate/css-m.jpg'} alt='Certificate' />
-            </Certificate>
-            <Certificate href={process.env.PUBLIC_URL + '/images/certificate/js.jpg'} rel='noopener noreferrer' target='_blank'>
-              SoloLearn JavaScript
-              <CertificateImg src={process.env.PUBLIC_URL + '/images/certificate/js-m.jpg'} alt='Certificate' />
-            </Certificate>
+            {this.state.certificate.map((certificate, k) => (
+              <Certificate key={k} href={process.env.PUBLIC_URL + certificate.img} rel='noopener noreferrer' target='_blank'>
+                {certificate.name}
+                <ImageLoader
+                  src={process.env.PUBLIC_URL + certificate.img}
+                  image={props => <CertificateImg {...props} alt='Certificate'/>}
+                  loading={() => <Loader><FontAwesomeIcon icon="spinner"/></Loader>}
+                  error={() => <div>Error</div>}       
+                />
+              </Certificate>
+            ))}
           </div>
   
       </Container>
