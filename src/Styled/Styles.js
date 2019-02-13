@@ -107,12 +107,22 @@ export const CertificateImg = styled.img`
     max-height: 90px;
     margin: 20px auto;
 `
-
 export const ContactWrapper = styled.div`
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 50px 0;
+`
+
+export const ContactItem = styled.div`
+    display: inline-flex;
+    width: 36%;
     justify-content: left;
     align-items: center;
     margin-bottom: 40px;
+    @media screen and (max-width: 900px) {
+        width: 100%;
+    }
 `
 export const Loader = styled.div`
     display: inline-block;

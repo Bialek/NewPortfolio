@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { PrimaryHeader, SecondaryHeader, HomeWrapper, Container, Paragraf, ContactWrapper } from '../Styled/Styles';
+import { PrimaryHeader, SecondaryHeader, ContactWrapper, Container, Paragraf, ContactItem } from '../Styled/Styles';
 import { NavIcon } from '../Styled/Nav';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 class Contact extends Component {
@@ -8,30 +8,32 @@ class Contact extends Component {
       <Container home>
         <div>
           <PrimaryHeader>Kontakt</PrimaryHeader>
-            <ContactWrapper>
+          <ContactWrapper>
+            <ContactItem>
               <NavIcon href='tel:607846422'>
                 <FontAwesomeIcon icon='mobile-alt'/>
               </NavIcon>
               <Paragraf contact>Tel: 607846422</Paragraf>
-            </ContactWrapper>
-            <ContactWrapper>
+            </ContactItem>
+            <ContactItem>
               <NavIcon href='mailto:contact@bialekrafal.pl'>
                 <FontAwesomeIcon icon='envelope'/>
               </NavIcon>
-              <Paragraf contact>Mail: contact@bialekrafal.pl</Paragraf>
-            </ContactWrapper>
-            <ContactWrapper>
+              <Paragraf contact>contact@bialekrafal.pl</Paragraf>
+            </ContactItem>
+            <ContactItem>
               <NavIcon href='https://github.com/Bialek' target='_blank'>
                 <FontAwesomeIcon icon={['fab','github']}/>
               </NavIcon>
               <Paragraf contact>github.com/Bialek</Paragraf>
-            </ContactWrapper>
-            <ContactWrapper>
+            </ContactItem>
+            <ContactItem>
               <NavIcon href='https://www.linkedin.com/in/rafał-białek/' target='_blank'>
                 <FontAwesomeIcon icon={['fab','linkedin-in']}/>
               </NavIcon>
               <Paragraf contact>linkedin.com/in/rafał-białek/</Paragraf>
-            </ContactWrapper>
+            </ContactItem>
+          </ContactWrapper>
 
           <SecondaryHeader>Formularz kontaktowy</SecondaryHeader>
           <SecondaryHeader>formularz w trakcie realizacji</SecondaryHeader>

@@ -46,6 +46,12 @@ class Nav extends Component {
                     <NavItem>
                         <NavLink to='/portfolio'>
                             <NavText menuOpen={this.state.menuOpen}>Projekty</NavText>
+                            <FontAwesomeIcon icon='file-code' />
+                        </NavLink>
+                    </NavItem>
+                    <NavItem>
+                        <NavLink to='/works'>
+                            <NavText menuOpen={this.state.menuOpen}>Realizacje</NavText>
                             <FontAwesomeIcon icon='laptop-code' />
                         </NavLink>
                     </NavItem>

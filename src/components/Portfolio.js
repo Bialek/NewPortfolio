@@ -43,7 +43,7 @@ class Portfolio extends Component {
         },
         {
           name: 'Hero Rent App',
-          description: 'Aplikacja do wynajmowania superbohaterów. Wykonana w czystym JS ES6, do styly wykorzystałem SCSS i BEM. Baza danych bohaterów i zawartość koszyka jest zapisywana do LocalStorage. Projekt realizowany dla Intive Patronage.',
+          description: 'Aplikacja do wynajmowania superbohaterów. Wykonana w czystym JS ES6, do styly wykorzystałem SCSS i BEM. Zawartość koszyka jest zapisywana do LocalStorage. Backend w NodeJS. Projekt realizowany dla Intive Patronage.',
           img: [
             "/images/projects/Hero-rent/1.jpg",
             "/images/projects/Hero-rent/2.jpg",
@@ -51,7 +51,7 @@ class Portfolio extends Component {
             "/images/projects/Hero-rent/4.jpg"
           ],
           github: "https://github.com/Bialek/Hero-Rent",
-          files: "https://bialek.github.io/Hero-Rent"
+          files: "https://heroku-hero-rent.herokuapp.com"
         },
         { 
           name: 'Photo-layout',
@@ -67,6 +67,17 @@ class Portfolio extends Component {
         { 
           name: 'ZTP-layout',
           description: 'Zadanie rektutacyjne, zrealizowane na podstawie dostarczonego pliku PSD. Style wykonane w Sass, metodologia BEM. Projekt poddany walidacji. Framework JavaScript to jQuery. Na projekt miałem zaledwie 4 dni.',
+          img: [
+            "/images/projects/ZTP-layout/1.jpg",
+            "/images/projects/ZTP-layout/2.jpg",
+            "/images/projects/ZTP-layout/3.jpg"
+          ],
+          github: "https://github.com/Bialek/ZTP-layout",
+          files: "/projects/ZTP-layout/index.html"
+        },
+        { 
+          name: 'Portfolio',
+          description: 'To portfolio, zbudowane na ReactJS. Style wykonane w Styled-Components. Animacja tła wykonane Kod CSS.',
           img: [
             "/images/projects/ZTP-layout/1.jpg",
             "/images/projects/ZTP-layout/2.jpg",

@@ -9,6 +9,7 @@ import Home from './components/Home';
 import Skills from './components/Skills';
 import Portfolio from './components/Portfolio';
 import Contact from './components/Contact';
+import Works from './components/Works';
 
 import { Page, MainContent, Stars, ShotingStars } from './Styled/Styles';
 
@@ -27,6 +28,7 @@ class App extends Component {
             <Route exact path='/' component={Home} />
             <Route path='/skills' component={Skills} />
             <Route path='/portfolio' component={Portfolio} />
+            <Route path='/works' component={Works} />
             <Route path='/contact' component={Contact} />
           </MainContent>
         </Page>
