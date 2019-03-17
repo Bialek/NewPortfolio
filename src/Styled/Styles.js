@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-
+import Slider from 'react-slick'
 import { rotateLoader, movingSkyAnimation, shootingStarAnimation } from './Keyframes';
 
 export const Page = styled.div`
@@ -34,14 +34,9 @@ export const Container = styled.div`
 `
 
 export const MainContent = styled.div`
-    width: 100%;
+    width: calc(100vw - 55px);
     height: 100%;
     text-align: center;
-    padding: 3vh;
-    padding-right: 0 !important;
-    @media screen and (max-width: 500px) {
-        padding: 1vh;
-    }
 `
 
 export const PrimaryHeader = styled.h1`
@@ -87,24 +82,125 @@ export const SkillWrapper = styled.div`
         width: 50%;
     }
 `
-
-export const Certificate = styled.a`
-    color: #fff;
-    text-decoration: none;
-    display: inline-flex;
-    flex-direction: column;
-    width: 25%;
-    @media screen and (max-width: 900px) {
-        width: 50%;
+export const SliderSlick = styled(Slider)`
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+        touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+    .slick-list {
+        position: relative;
+        display: block;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
     }
-    @media screen and (max-width: 500px) {
-        width: 100%;
+    .slick-list:focus {
+        outline: none;
+    }
+    .slick-list.dragging {
+        cursor: pointer;
+        cursor: hand;
+    }
+    .slick-slider .slick-track,
+    .slick-slider .slick-list {
+        -webkit-transform: translate3d(0, 0, 0);
+        -moz-transform: translate3d(0, 0, 0);
+            -ms-transform: translate3d(0, 0, 0);
+            -o-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+    }
+    .slick-track {
+        position: relative;
+        top: 0;
+        left: 0;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .slick-track:before,
+    .slick-track:after {
+        display: table;
+        content: '';
+    }
+    .slick-track:after {
+        clear: both;
+    }
+    .slick-loading .slick-track {
+        visibility: hidden;
+    }
+
+    .slick-slide {
+        float: left;
+        height: 100%;
+        min-height: 1px;
+    }
+    [dir='rtl'] .slick-slide {
+        float: right;
+    }
+    .slick-slide img {
+        display: block;
+    }
+    .slick-slide.slick-loading img {
+        display: none;
+    }
+    .slick-slide.dragging img {
+        pointer-events: none;
+    }
+    .slick-initialized .slick-slide {
+        display: block;
+    }
+    .slick-loading .slick-slide {
+        visibility: hidden;
+    }
+    .slick-vertical .slick-slide {
+        display: block;
+        height: auto;
+        border: 1px solid transparent;
+    }
+    .slick-arrow.slick-hidden {
+        display: none;
+    }
+    .slick-arrow {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        background-color: transparent;
+        border: none;
+        z-index: 999;
+        svg {
+            width: 40px;
+            height: 40px;
+            color: rgba(255,255,255,0.3);
+            transition: all ease-in-out .4s;
+            cursor: pointer;
+            :hover {
+                color: rgba(255,255,255,0.8);
+            }
+        }
+    }
+    .slick-next {
+        right: 0;
+    }
+    .slick-left {
+        left: 0;
     }
 `
 
+export const Certificate = styled.div`
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+`
+
 export const CertificateImg = styled.img`
-    max-width: 110px;
-    max-height: 90px;
     margin: 20px auto;
 `
 export const ContactWrapper = styled.div`
