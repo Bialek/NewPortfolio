@@ -32,6 +32,18 @@ export const Container = styled.div`
         padding: ${props => props.home ? '0 2%' : ''};
     }
 `
+export const Button = styled.button`
+    border: none;
+    background: transparent;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    .svg-inline--fa.fa-w-11 {
+        width: 40px;
+        height: 40px;
+        color: #fff;
+    }
+`
 
 export const MainContent = styled.div`
     width: calc(100vw - 55px);
@@ -192,6 +204,31 @@ export const SliderSlick = styled(Slider)`
     .slick-left {
         left: 0;
     }
+    .slick-dots {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -40px;
+        display: flex !important;
+        justify-content: center;
+        list-style-type: none;
+        li {
+            button {
+                border-radius: 50%;
+                width: 20px;
+                height: 20px;
+                margin: 0 20px;
+                font-size: 0;
+                border: none;
+                background-color: rgba(255,255,255,0.4);
+            }
+            &.slick-active {
+                button {
+                    background-color: rgba(255,255,255,0.9);
+                }
+            }
+        }
+    }
 `
 
 export const Certificate = styled.div`
@@ -282,4 +319,35 @@ export const ShotingStars = styled.span`
 	right: 0;
 	background: linear-gradient(to top, rgba(255, 255, 255, 0), white);
 	animation: ${shootingStarAnimation} 10s linear infinite;
+`
+export const Modal = styled.div`
+    z-index: ${props => props.modalActive ? '9999' : '-1'};
+    color: ${props => console.log(props.modalActive)};
+    background-color: rgba(0,0,0,0.8);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    padding: 40px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transition: opacity ease-in-out .4s;
+    opacity: ${props => props.modalActive ? '1' : '0'};
+    img {
+        max-width: 85vw;
+        max-height: 85vh;
+        object-fit: contain;
+    }
+    button {
+        svg {
+            color: #fff !important;
+        }
+    }
+    .slick-slider {
+        width: 100%;
+    }
 `
