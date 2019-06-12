@@ -60,7 +60,7 @@ export const PrimaryHeader = styled.h1`
 `
 export const SecondaryHeader = styled.h2`
     color: #fff;
-    margin-bottom: 20px;
+    margin: 20px 0;
     text-align: center;
     font-size: 1.5em;
     font-weight: 700;
@@ -84,14 +84,8 @@ export const HomeImg = styled.img`
 `
 
 export const SkillWrapper = styled.div`
-    width: 15%;
-    display: inline-block;
-    margin: 20px 0 ;
-    @media screen and (max-width: 900px) {
-        width: 30%;
-    }
-    @media screen and (max-width: 900px) {
-        width: 50%;
+    img {
+        margin: 0 auto;
     }
 `
 export const SliderSlick = styled(Slider)`

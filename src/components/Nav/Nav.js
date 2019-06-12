@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
-import { PrimaryHeader, SecondaryHeader } from '../Styled/Styles';
-import { NavWrapper, NavControl, NavList, NavItem,  NavLink, NavLogo, NavText, NavContact, NavIcon } from '../Styled/Nav';
+import { PrimaryHeader, SecondaryHeader } from '../../Styled/Styles';
+import { NavWrapper, NavControl, NavList, NavItem,  NavLink, NavLogo, NavText, NavContact, NavIcon } from './Nav.style';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 class Nav extends Component {

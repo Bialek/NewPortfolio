@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { PrimaryHeader, SecondaryHeader, ContactWrapper, Container, Paragraf, ContactItem } from '../Styled/Styles';
-import { NavIcon } from '../Styled/Nav';
+import { PrimaryHeader, SecondaryHeader, ContactWrapper, Container, Paragraf, ContactItem } from '../../Styled/Styles';
+import { NavIcon } from '../Nav/Nav.style';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 class Contact extends Component {
   render() {

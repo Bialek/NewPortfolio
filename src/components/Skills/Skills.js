@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, PrimaryHeader, SecondaryHeader, Paragraf, Button, SkillWrapper, Certificate, CertificateImg, Loader, SliderSlick, Modal } from '../Styled/Styles'; 
+import { Container, PrimaryHeader, SecondaryHeader, Paragraf, Button, SkillWrapper, Certificate, CertificateImg, Loader, SliderSlick, Modal } from '../../Styled/Styles'; 
 import ImageLoader from 'react-loading-image'; 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; 
 const uuidv4 = require('uuid/v4'); 
@@ -30,7 +30,34 @@ export default class Skills extends Component {
         { 'img': '/images/certificate/html.jpg', 'miniature': '/images/certificate/html-m.jpg', 'name': 'SoloLearn HTML' }, 
         { 'img': '/images/certificate/css.jpg', 'miniature': '/images/certificate/css-m.jpg', 'name': 'SoloLearn CSS' }, 
         { 'img': '/images/certificate/js.jpg', 'miniature': '/images/certificate/js-m.jpg', 'name': 'SoloLearn JavaScript' }
-      ], 
+      ],
+      skillsSlider: { 
+        arrows: true, 
+        infinite: true, 
+        className: "center",
+        centerMode: true,
+        centerPadding: "60px",
+        slidesToShow: 3,
+        speed: 500,
+        rows: 2,
+        slidesPerRow: 2,
+        responsive: [ 
+          { 
+            breakpoint: 768, 
+            settings: { 
+              slidesToShow: 3,
+              row: 2,
+              sliderPerRow: 2,
+            } 
+          }, 
+          { 
+            breakpoint: 480, 
+            settings: { 
+              slidesToShow: 1 
+            } 
+          } 
+        ] 
+      },  
       thumbnailsSlider: { 
         arrows: true, 
         infinite: true, 
@@ -83,7 +110,9 @@ export default class Skills extends Component {
     return ( 
       <Container> 
         <PrimaryHeader>Umiejetności</PrimaryHeader> 
-        <div> 
+        <SliderSlick 
+          {...this.state.skillsSlider} 
+          ref={slider => (this.slider1 = slider)}> 
           {this.state.skillIcons.map((skill) => ( 
             <SkillWrapper key={uuidv4()}> 
               <Paragraf>{skill.name}</Paragraf> 
@@ -96,7 +125,7 @@ export default class Skills extends Component {
               /> 
             </SkillWrapper> 
           ))} 
-        </div> 
+        </SliderSlick> 
         <SecondaryHeader>Certyfikaty</SecondaryHeader> 
         <SliderSlick 
           {...this.state.thumbnailsSlider} 

@@ -3,18 +3,10 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 
 export const ProjectsWrapper = styled.div`
-    overflow-y: scroll;
     height: calc(100vh - 100px);
     max-width: 100%;
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-column-gap: 40px;
-    @media screen and (max-width: 1200px){
-        grid-template-columns: auto auto;
-    }
-    @media screen and (max-width: 900px) {
-        grid-template-columns: auto;
-    }
+    display: flex;
+    overflow-x: scroll;
 `
 
 export const ProjectSlider = styled(Carousel)`
@@ -39,6 +31,7 @@ export const Project = styled.div`
     padding: 15px;
     margin: 15px 0;
     border-bottom: 1px #535353 solid;
+    height: 90vh;
 ` 
 export const ProjectContent = styled.div`
     display: flex;

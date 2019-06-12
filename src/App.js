@@ -4,12 +4,12 @@ import {
   Route
 } from 'react-router-dom';
 
-import Nav from './components/Nav';
-import Home from './components/Home';
-import Skills from './components/Skills';
-import Portfolio from './components/Portfolio';
-import Contact from './components/Contact';
-import Works from './components/Works';
+import Nav from './components/Nav/Nav';
+import Home from './components/Home/Home';
+import Skills from './components/Skills/Skills';
+import Portfolio from './components/Projects/Projects';
+import Contact from './components/Contact/Contact';
+import Works from './components/Works/Works';
 
 import { Page, MainContent, Stars, ShotingStars } from './Styled/Styles';
 

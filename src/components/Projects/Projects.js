@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { PrimaryHeader, SecondaryHeader, Paragraf } from '../Styled/Styles';
-import { ProjectsWrapper, Project, ProjectSlider, ProjectContent, ProjectLink } from '../Styled/Portfolio';
+import { PrimaryHeader, SecondaryHeader, Paragraf, SliderSlick } from '../../Styled/Styles';
+import { ProjectsWrapper, Project, ProjectSlider, ProjectContent, ProjectLink } from './Projects.style';
 
+const SlickButtonFix = ({currentSlide, slideCount, children, ...props}) => ( 
+  <button {...props}>{children}</button> 
+);
 class Portfolio extends Component {
   constructor() {
     super();
@@ -86,7 +89,31 @@ class Portfolio extends Component {
           github: "https://github.com/Bialek/ZTP-layout",
           files: "/projects/ZTP-layout/index.html"
         },
-      ]
+      ],
+      Slider: { 
+        arrows: true, 
+        infinite: true, 
+        speed: 500, 
+        centerMode: true,
+        slidesToShow: 3, 
+        slidesToScroll: 1, 
+        nextArrow: <SlickButtonFix><FontAwesomeIcon icon='angle-right'/></SlickButtonFix>, 
+        prevArrow: <SlickButtonFix><FontAwesomeIcon icon='angle-left'/></SlickButtonFix>,
+        responsive: [ 
+          { 
+            breakpoint: 768, 
+            settings: { 
+              slidesToShow: 2 
+            } 
+          }, 
+          { 
+            breakpoint: 480, 
+            settings: { 
+              slidesToShow: 1 
+            } 
+          } 
+        ] 
+      }
     }
   }
 
@@ -94,7 +121,9 @@ class Portfolio extends Component {
     return (
       <div>
         <PrimaryHeader>Projekty</PrimaryHeader>
-        <ProjectsWrapper>
+        <SliderSlick 
+          {...this.state.Slider} 
+          ref={slider => (this.slider1 = slider)}>
           {this.state.projects.map((project, k) =>
             <Project key={k}>
               
@@ -132,7 +161,7 @@ class Portfolio extends Component {
               </ProjectContent>
             </Project>
           )}
-        </ProjectsWrapper>
+        </SliderSlick>
       </div>
     );
   }
