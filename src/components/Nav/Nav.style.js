@@ -1,6 +1,4 @@
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
-
 
 export const NavWrapper = styled.div`
     min-width: ${props => props.menuOpen ? '300px' : '55px'};
@@ -68,7 +66,7 @@ export const NavItem = styled.li`
     margin-bottom: 15px;
 `
 
-export const NavLink = styled(Link)`
+export const NavLink = styled.a`
     font-size: 1.5em;
     text-decoration: none;
     color: #fff;

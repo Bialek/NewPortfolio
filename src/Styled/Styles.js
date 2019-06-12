@@ -8,18 +8,14 @@ export const Page = styled.div`
     height: 100vh;
     overflow: hidden;
     background: linear-gradient(to bottom,#020107 0%,#201b46 70%);
+    text-align: center;
 `
 
 export const Container = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    height: 94vh;  
-    overflow-y: auto;
-    @media screen and (max-width: 500px) {
-        /* height: 99vh;
-        display: block; */
-    }
+    height: 100%;
     padding: ${props => props.home ? '0 20%' : ''};
     margin: 0 auto;
     @media screen and (max-width: 1200px) {
@@ -258,7 +254,7 @@ export const Loader = styled.div`
     height: 100px;
     font-size: 80px;
     margin: 0 auto;
-    animation: ${rotateLoader} 1s ease-in-out infinite; 
+    animation: ${rotateLoader} 1s ease-in-out infinite;
 `
 
 
@@ -301,7 +297,7 @@ export const Stars = styled.span`
         background-color: transparent;
         box-shadow: ${props => createStars(props.starNumber)};
     }
-` 
+`
 export const ShotingStars = styled.span`
     z-index: 10;
 	width: 5px;
@@ -313,35 +309,4 @@ export const ShotingStars = styled.span`
 	right: 0;
 	background: linear-gradient(to top, rgba(255, 255, 255, 0), white);
 	animation: ${shootingStarAnimation} 10s linear infinite;
-`
-export const Modal = styled.div`
-    z-index: ${props => props.modalActive ? '9999' : '-1'};
-    color: ${props => console.log(props.modalActive)};
-    background-color: rgba(0,0,0,0.8);
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    padding: 40px;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    transition: opacity ease-in-out .4s;
-    opacity: ${props => props.modalActive ? '1' : '0'};
-    img {
-        max-width: 85vw;
-        max-height: 85vh;
-        object-fit: contain;
-    }
-    button {
-        svg {
-            color: #fff !important;
-        }
-    }
-    .slick-slider {
-        width: 100%;
-    }
 `
