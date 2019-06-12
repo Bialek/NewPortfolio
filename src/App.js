@@ -1,9 +1,5 @@
 import React, { Component } from 'react';
-import {
-  HashRouter as Router,
-  Route
-} from 'react-router-dom';
-
+import ReactPageScroller from 'rea'
 import Nav from './components/Nav/Nav';
 import Home from './components/Home/Home';
 import Skills from './components/Skills/Skills';

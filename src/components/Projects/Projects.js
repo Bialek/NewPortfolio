@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { PrimaryHeader, SecondaryHeader, Paragraf, SliderSlick } from '../../Styled/Styles';
-import { ProjectsWrapper, Project, ProjectSlider, ProjectContent, ProjectLink } from './Projects.style';
+import { Project, ProjectSlider, ProjectContent, ProjectLink } from './Projects.style';
 
 const SlickButtonFix = ({currentSlide, slideCount, children, ...props}) => ( 
   <button {...props}>{children}</button> 
@@ -146,7 +146,7 @@ class Portfolio extends Component {
                 </ProjectSlider>
                 <ProjectContent>
                   <SecondaryHeader>{project.name}</SecondaryHeader>
-                  <Paragraf>{project.description}</Paragraf>
+                  {/* <Paragraf>{project.description}</Paragraf> */}
                   <div>
                     <ProjectLink href={project.github} target="_blank">
                       Code

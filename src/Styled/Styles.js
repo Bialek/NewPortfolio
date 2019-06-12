@@ -11,14 +11,14 @@ export const Page = styled.div`
 `
 
 export const Container = styled.div`
-    display: ${props => props.home ? 'block' : 'flex'};
+    display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     height: 94vh;  
     overflow-y: auto;
     @media screen and (max-width: 500px) {
-        height: 99vh;
-        display: block;
+        /* height: 99vh;
+        display: block; */
     }
     padding: ${props => props.home ? '0 20%' : ''};
     margin: 0 auto;
@@ -53,7 +53,7 @@ export const MainContent = styled.div`
 
 export const PrimaryHeader = styled.h1`
     color: #fff;
-    margin-bottom: 20px;
+    margin-bottom: ${props => props.home ? '0' : '20px' };
     text-align: center;
     font-size: 2em;
     font-weight: 900;
@@ -69,7 +69,7 @@ export const SecondaryHeader = styled.h2`
 export const Paragraf = styled.p`
     color: #fff;
     font-size: 1.2em;
-    margin-bottom: ${props => props.home ? '50px' : '10px'};
+    margin-bottom: ${props => props.home ? '0' : '10px'};
     text-decoration: none;
     margin: ${props => props.contact ? '0 0 0 20px' : ''};
 `
