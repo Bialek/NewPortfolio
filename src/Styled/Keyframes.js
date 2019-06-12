@@ -1,5 +1,4 @@
-import { keyframes } from 'styled-components';      
-
+import { keyframes } from 'styled-components'
 
 export const rotateLoader = keyframes`
     0% {
@@ -9,7 +8,6 @@ export const rotateLoader = keyframes`
         transform: rotate(360deg);
     }
 `
-
 
 export const movingSkyAnimation = keyframes`
   0% {
@@ -32,4 +30,4 @@ export const shootingStarAnimation = keyframes`
 		opacity: 1;
 		height: 800px;
 	}
-` 
+`
