@@ -46,31 +46,31 @@ class Nav extends Component {
 
         <NavList>
           <NavItem>
-            <NavLink to="/">
+            <NavLink onClick={() => this.props.goToPage(0)}>
               <NavText menuOpen={this.state.menuOpen}>Strona Domowa</NavText>
               <FontAwesomeIcon icon="home" />
             </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink to="/skills">
+            <NavLink onClick={() => this.props.goToPage(1)}>
               <NavText menuOpen={this.state.menuOpen}>Umiejetności</NavText>
               <FontAwesomeIcon icon="chart-bar" />
             </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink to="/portfolio">
+            <NavLink onClick={() => this.props.goToPage(2)}>
               <NavText menuOpen={this.state.menuOpen}>Projekty</NavText>
               <FontAwesomeIcon icon="file-code" />
             </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink to="/works">
+            <NavLink onClick={() => this.props.goToPage(3)}>
               <NavText menuOpen={this.state.menuOpen}>Realizacje</NavText>
               <FontAwesomeIcon icon="laptop-code" />
             </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink to="/contact">
+            <NavLink onClick={() => this.props.goToPage(4)}>
               <NavText menuOpen={this.state.menuOpen}>Kontakt</NavText>
               <FontAwesomeIcon icon={['fab', 'wpforms']} />
             </NavLink>

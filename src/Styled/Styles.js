@@ -18,19 +18,11 @@ export const Page = styled.div`
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-around;
+  padding-left: 55px;
   height: 100%;
-  padding: ${props => (props.home ? '0 20%' : '')};
+  padding-left: 55px;
   margin: 0 auto;
-  @media screen and (max-width: 1200px) {
-    padding: ${props => (props.home ? '0 15%' : '')};
-  }
-  @media screen and (max-width: 900px) {
-    padding: ${props => (props.home ? '0 15%' : '')};
-  }
-  @media screen and (max-width: 500px) {
-    padding: ${props => (props.home ? '0 2%' : '')};
-  }
 `
 export const Button = styled.button`
   border: none;
@@ -71,6 +63,7 @@ export const Paragraf = styled.p`
   font-size: 1.2em;
   margin-bottom: ${props => (props.home ? '0' : '10px')};
   text-decoration: none;
+  text-align: ${props => props.home}
   margin: ${props => (props.contact ? '0 0 0 20px' : '')};
 `
 

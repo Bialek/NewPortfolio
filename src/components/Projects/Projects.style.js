@@ -1,6 +1,4 @@
 import styled from 'styled-components'
-import 'react-responsive-carousel/lib/styles/carousel.min.css'
-import { Carousel } from 'react-responsive-carousel'
 
 export const ProjectsWrapper = styled.div`
   height: calc(100vh - 100px);
@@ -9,7 +7,7 @@ export const ProjectsWrapper = styled.div`
   overflow-x: scroll;
 `
 
-export const ProjectSlider = styled(Carousel)`
+export const ProjectSlider = styled.div`
   width: 300px;
   margin-right: 15px;
   margin-bottom: 50px;

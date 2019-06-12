@@ -13,9 +13,10 @@ const Home = () => (
     </Paragraf>
     <Paragraf home>
       Strony i aplikacje webowe tworze w: HTML, CSS, SCSS, JavaScript, Jquery,
-      React, Redux, NodeJs, Styled-Components. Mam doświadczenie z CMS
-      Wordpressem. Kod staram się pisać w oparciu o najlepsze praktyki, takie
-      jak DRY czy KISS. Strony poddaje walidacji.
+      React, Redux, NodeJs, Styled-Components.
+      <br /> Mam doświadczenie z CMS Wordpressem. <br />
+      Kod staram się pisać w oparciu o najlepsze praktyki, takie jak SOLID, DRY
+      czy KISS.
     </Paragraf>
     <Paragraf home>
       Zrealizuje dla ciebie: strone, blog, sklep, aplikacje webową

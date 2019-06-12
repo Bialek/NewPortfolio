@@ -6,13 +6,13 @@ export const NavWrapper = styled.div`
   z-index: 2;
   font-size: 0.9em;
   color: #fff;
-  background-color: rgba(26, 82, 118, 0.7);
+  background-color: rgba(26, 82, 118, 0.8);
   padding: ${props => (props.menuOpen ? '10px' : '0')};
   display: flex;
   flex-direction: column;
   box-shadow: 3px 0px 5px 0px rgba(0, 0, 0, 0.75);
   transition: all ease-out 0.3s;
-  position: relative;
+  position: fixed;
   overflow: hidden;
   padding-top: 80px;
   @media screen and (min-height: 600px) {
@@ -67,6 +67,7 @@ export const NavItem = styled.li`
 `
 
 export const NavLink = styled.a`
+  cursor: pointer;
   font-size: 1.5em;
   text-decoration: none;
   color: #fff;
