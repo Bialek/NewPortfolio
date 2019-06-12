@@ -1,10 +1,6 @@
 import styled from 'styled-components'
 import Slider from 'react-slick'
-import {
-  rotateLoader,
-  movingSkyAnimation,
-  shootingStarAnimation,
-} from './Keyframes'
+import { rotateLoader } from './Keyframes'
 
 export const Page = styled.div`
   display: flex;
@@ -252,59 +248,4 @@ export const Loader = styled.div`
   font-size: 80px;
   margin: 0 auto;
   animation: ${rotateLoader} 1s ease-in-out infinite;
-`
-
-function createStars(starNumber) {
-  let stars = '726px 927px #fff'
-  for (let i = 1; i < starNumber; i++) {
-    stars += `, ${Math.floor(Math.random() * 2000)}px ${Math.floor(
-      Math.random() * 1000
-    )}px #fff`
-  }
-  return stars
-}
-
-export const Stars = styled.span`
-  z-index: 10;
-  width: ${props => props.starSize};
-  height: ${props => props.starSize};
-  border-radius: 50%;
-  background-color: transparent;
-  box-shadow: ${props => createStars(props.starNumber)};
-  animation: ${movingSkyAnimation} 150s linear infinite;
-  position: absolute;
-  &:after {
-    content: ' ';
-    top: -300px;
-    left: -300px;
-    width: ${props => props.starSize};
-    height: ${props => props.starSize};
-    border-radius: 50%;
-    position: absolute;
-    background-color: transparent;
-    box-shadow: ${props => createStars(props.starNumber)};
-  }
-  &:before {
-    content: ' ';
-    bottom: -300px;
-    right: -300px;
-    width: ${props => props.starSize};
-    height: ${props => props.starSize};
-    border-radius: 50%;
-    position: absolute;
-    background-color: transparent;
-    box-shadow: ${props => createStars(props.starNumber)};
-  }
-`
-export const ShotingStars = styled.span`
-  z-index: 10;
-  width: 5px;
-  height: 85px;
-  border-top-left-radius: 50%;
-  border-top-right-radius: 50%;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  background: linear-gradient(to top, rgba(255, 255, 255, 0), white);
-  animation: ${shootingStarAnimation} 10s linear infinite;
 `

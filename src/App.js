@@ -6,8 +6,9 @@ import Skills from './components/Skills/Skills'
 import Projects from './components/Projects/Projects'
 import Contact from './components/Contact/Contact'
 import Works from './components/Works/Works'
+import Background from './components/Background/Background'
 
-import { Page, Stars, ShotingStars } from './Styled/Styles'
+import { Page } from './Styled/Styles'
 
 class App extends Component {
   constructor(props) {
@@ -27,10 +28,7 @@ class App extends Component {
   render() {
     return (
       <Page>
-        <Stars starSize="1px" starNumber="100" />
-        <Stars starSize="2px" starNumber="50" />
-        <Stars starSize="3px" starNumber="25" />
-        <ShotingStars />
+        <Background />
         <Nav activePage={this.state.currentPage} goToPage={this.goToPage} />
         <PageScroller
           ref={c => (this._pageScroller = c)}
