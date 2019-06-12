@@ -1,10 +1,10 @@
 import styled from 'styled-components'
 
 export const ProjectsWrapper = styled.div`
-  height: calc(100vh - 100px);
-  max-width: 100%;
-  display: flex;
-  overflow-x: scroll;
+  padding-left: 55px;
+  padding-top: 20px;
+  max-width: 100vw;
+  max-height: 100vh;
 `
 
 export const ProjectSlider = styled.div`
@@ -24,12 +24,25 @@ export const ProjectSlider = styled.div`
 `
 
 export const Project = styled.div`
+  cursor: pointer;
   width: 100%;
-  display: block;
-  padding: 15px;
-  margin: 15px 0;
-  border-bottom: 1px #535353 solid;
-  height: 90vh;
+  display: flex;
+  height: 40vh;
+  position: relative;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+  h3 {
+    position: absolute;
+    color: #fff;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 700;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5)
+  }
 `
 export const ProjectContent = styled.div`
   display: flex;

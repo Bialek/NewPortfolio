@@ -8,6 +8,8 @@ import Contact from './components/Contact/Contact'
 import Works from './components/Works/Works'
 import Background from './components/Background/Background'
 
+import DB from './DB'
+
 import { Page } from './Styled/Styles'
 
 class App extends Component {
@@ -35,8 +37,8 @@ class App extends Component {
           pageOnChange={this.pageOnChange}>
           <Home />
           <Skills />
-          <Projects />
-          <Works />
+          <Projects props={DB.projects} />
+          {/* <Works /> */}
           <Contact />
         </PageScroller>
       </Page>
