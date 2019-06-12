@@ -73,7 +73,7 @@ export const NavLink = styled.a`
   color: #fff;
   background-image: linear-gradient(to bottom, #fff 0%, #fff 100%);
   background-repeat: no-repeat;
-  background-size: 0 2px;
+  background-size: ${props => (props.active ? '100% 2px;' : '0 2px')};
   background-position: 0 100%;
   padding-bottom: 10px;
   transition: all ease-in-out 0.3s;

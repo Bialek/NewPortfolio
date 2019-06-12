@@ -31,7 +31,7 @@ class App extends Component {
         <Stars starSize="2px" starNumber="50" />
         <Stars starSize="3px" starNumber="25" />
         <ShotingStars />
-        <Nav goToPage={this.goToPage} />
+        <Nav activePage={this.state.currentPage} goToPage={this.goToPage} />
         <PageScroller
           ref={c => (this._pageScroller = c)}
           pageOnChange={this.pageOnChange}>

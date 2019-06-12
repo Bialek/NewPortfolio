@@ -29,6 +29,7 @@ class Nav extends Component {
   }
 
   render() {
+    const activePage = this.props.activePage
     return (
       <NavWrapper menuOpen={this.state.menuOpen}>
         <NavControl
@@ -46,31 +47,41 @@ class Nav extends Component {
 
         <NavList>
           <NavItem>
-            <NavLink onClick={() => this.props.goToPage(0)}>
+            <NavLink
+              active={activePage === 1 ? true : false}
+              onClick={() => this.props.goToPage(0)}>
               <NavText menuOpen={this.state.menuOpen}>Strona Domowa</NavText>
               <FontAwesomeIcon icon="home" />
             </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink onClick={() => this.props.goToPage(1)}>
+            <NavLink
+              active={activePage === 2 ? true : false}
+              onClick={() => this.props.goToPage(1)}>
               <NavText menuOpen={this.state.menuOpen}>Umiejetności</NavText>
               <FontAwesomeIcon icon="chart-bar" />
             </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink onClick={() => this.props.goToPage(2)}>
+            <NavLink
+              active={activePage === 3 ? true : false}
+              onClick={() => this.props.goToPage(2)}>
               <NavText menuOpen={this.state.menuOpen}>Projekty</NavText>
               <FontAwesomeIcon icon="file-code" />
             </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink onClick={() => this.props.goToPage(3)}>
+            <NavLink
+              active={activePage === 4 ? true : false}
+              onClick={() => this.props.goToPage(3)}>
               <NavText menuOpen={this.state.menuOpen}>Realizacje</NavText>
               <FontAwesomeIcon icon="laptop-code" />
             </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink onClick={() => this.props.goToPage(4)}>
+            <NavLink
+              active={activePage === 5 ? true : false}
+              onClick={() => this.props.goToPage(4)}>
               <NavText menuOpen={this.state.menuOpen}>Kontakt</NavText>
               <FontAwesomeIcon icon={['fab', 'wpforms']} />
             </NavLink>
