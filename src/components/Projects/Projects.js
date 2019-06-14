@@ -1,8 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { PrimaryHeader, Paragraf, SliderSlick } from '../../Styled/Styles'
 import { Project, ProjectsWrapper } from './Projects.style'
-import Modal from '../Modal/Modal'
 const uuid = require('uuid/v4')
 
 const slickSetup = {
@@ -31,27 +30,38 @@ const slickSetup = {
   ],
 }
 
-const renderModal = (data) => (
-  <Modal>
-
-  </Modal>
+const ProjectInfo = project => (
+  <div>
+    <h3>{project.name}</h3>
+    <Paragraf>{project.description}</Paragraf>
+  </div>
 )
 
 export default function Projects({ props }) {
+  const [isProjectOpen, setIsProjectOpen] = useState(false)
+  const [projectData, setProjectData] = useState([])
+
+  function onClickHandler(project) {
+    setProjectData(project)
+    setIsProjectOpen(true)
+  }
   return (
-    <ProjectsWrapper>
-      <PrimaryHeader>Projekty</PrimaryHeader>
-      <SliderSlick {...slickSetup}>
-        {props.map(project => (
-          <Project onClick={() => renderModal(project)} key={uuid()}>
-            <h3>{project.name}</h3>
-            <img
-              src={process.env.PUBLIC_URL + project.img[0]}
-              alt={project.name}
-            />
-          </Project>
-        ))}
-      </SliderSlick>
-    </ProjectsWrapper>
+    <>
+      <ProjectsWrapper>
+        <PrimaryHeader>Projekty</PrimaryHeader>
+        <SliderSlick {...slickSetup}>
+          {props.map(project => (
+            <Project onClick={() => onClickHandler(project)} key={uuid()}>
+              <h3>{project.name}</h3>
+              <img
+                src={process.env.PUBLIC_URL + project.img[0]}
+                alt={project.name}
+              />
+            </Project>
+          ))}
+        </SliderSlick>
+      </ProjectsWrapper>
+      {isProjectOpen && <ProjectInfo project={projectData} />}
+    </>
   )
 }

@@ -11,6 +11,7 @@ import {
   CertificateImg,
   Loader,
   SliderSlick,
+  StyledModal,
 } from '../../Styled/Styles'
 import ImageLoader from 'react-loading-image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -181,7 +182,7 @@ export default class Skills extends Component {
             <Certificate
               key={uuidv4()}
               onClick={() => this.onClickHandler(true)}>
-              {certificate.name}
+              <Paragraf>{certificate.name}</Paragraf>
               <ImageLoader
                 src={process.env.PUBLIC_URL + certificate.miniature}
                 image={props => <CertificateImg {...props} alt="Certificate" />}
@@ -195,21 +196,23 @@ export default class Skills extends Component {
             </Certificate>
           ))}
         </SliderSlick>
-        <Modal modalActive={this.state.modalActive}>
-          <Button onClick={() => this.onClickHandler(false)}>
-            <FontAwesomeIcon icon="times" />
-          </Button>
-          <SliderSlick
-            {...this.state.modalSlider}
-            ref={slider => (this.slider2 = slider)}>
-            {this.state.certificate.map(certificate => (
-              <img
-                key={uuidv4()}
-                src={process.env.PUBLIC_URL + certificate.img}
-                alt="certificate"
-              />
-            ))}
-          </SliderSlick>
+        <Modal>
+          <StyledModal modalActive={this.state.modalActive}>
+            <Button onClick={() => this.onClickHandler(false)}>
+              <FontAwesomeIcon icon="times" />
+            </Button>
+            <SliderSlick
+              {...this.state.modalSlider}
+              ref={slider => (this.slider2 = slider)}>
+              {this.state.certificate.map(certificate => (
+                <img
+                  key={uuidv4()}
+                  src={process.env.PUBLIC_URL + certificate.img}
+                  alt="certificate"
+                />
+              ))}
+            </SliderSlick>
+          </StyledModal>
         </Modal>
       </Container>
     )

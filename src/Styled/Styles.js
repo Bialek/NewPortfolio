@@ -96,15 +96,15 @@ export const SliderSlick = styled(Slider)`
     overflow: hidden;
     margin: 0;
     padding: 0;
+    :focus {
+      outline: none;
+    }
+    .dragging {
+      cursor: pointer;
+      cursor: hand;
+    }
   }
-  .slick-list:focus {
-    outline: none;
-  }
-  .slick-list.dragging {
-    cursor: pointer;
-    cursor: hand;
-  }
-  .slick-slider .slick-track,
+  .slick-list .slick-list .slick-slider .slick-track,
   .slick-slider .slick-list {
     -webkit-transform: translate3d(0, 0, 0);
     -moz-transform: translate3d(0, 0, 0);
@@ -119,35 +119,40 @@ export const SliderSlick = styled(Slider)`
     display: block;
     margin-left: auto;
     margin-right: auto;
+    :before,
+    :after {
+      display: table;
+      content: '';
+    }
+    :after {
+      clear: both;
+    }
   }
-  .slick-track:before,
-  .slick-track:after {
-    display: table;
-    content: '';
+  .slick-loading {
+    .slick-track {
+      visibility: hidden;
+    }
+    .slick-slide {
+      visibility: hidden;
+    }
   }
-  .slick-track:after {
-    clear: both;
-  }
-  .slick-loading .slick-track {
-    visibility: hidden;
-  }
-
   .slick-slide {
     float: left;
     height: 100%;
     min-height: 1px;
+    img[alt~='certificate'] {
+      display: block !important;
+      margin: 0 auto;
+    }
+    .slick-loading img {
+      display: none;
+    }
+    .dragging img {
+      pointer-events: none;
+    }
   }
   [dir='rtl'] .slick-slide {
     float: right;
-  }
-  .slick-slide img {
-    display: block;
-  }
-  .slick-slide.slick-loading img {
-    display: none;
-  }
-  .slick-slide.dragging img {
-    pointer-events: none;
   }
   .slick-initialized .slick-slide {
     display: block;
@@ -218,6 +223,7 @@ export const Certificate = styled.div`
   color: #fff;
   text-decoration: none;
   cursor: pointer;
+  display: flex;
 `
 
 export const CertificateImg = styled.img`
@@ -248,4 +254,35 @@ export const Loader = styled.div`
   font-size: 80px;
   margin: 0 auto;
   animation: ${rotateLoader} 1s ease-in-out infinite;
+`
+
+export const StyledModal = styled.div`
+  z-index: ${props => (props.modalActive ? '9999' : '-1')};
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  padding: 40px;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  transition: opacity ease-in-out 0.4s;
+  opacity: ${props => (props.modalActive ? '1' : '0')};
+  img {
+    max-width: 85vw;
+    max-height: 85vh;
+    object-fit: contain;
+  }
+  button {
+    svg {
+      color: #fff !important;
+    }
+  }
+  .slick-slider {
+    width: 100%;
+  }
 `
