@@ -5,7 +5,6 @@ import Home from './components/Home/Home'
 import Skills from './components/Skills/Skills'
 import Projects from './components/Projects/Projects'
 import Contact from './components/Contact/Contact'
-import Works from './components/Works/Works'
 import Background from './components/Background/Background'
 
 import DB from './DB'
@@ -38,7 +37,6 @@ class App extends Component {
           <Home />
           <Skills />
           <Projects props={DB.projects} />
-          {/* <Works /> */}
           <Contact />
         </PageScroller>
       </Page>

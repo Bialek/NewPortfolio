@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { PrimaryHeader, Paragraf, SliderSlick } from '../../Styled/Styles'
+import { PrimaryHeader, SliderSlick, } from '../../Styled/Styles'
 import { Project, ProjectsWrapper } from './Projects.style'
-const uuid = require('uuid/v4')
+import uuid from 'uuid/v4'
+import ProjectInfo from '../ProjectInfo/ProjectInfo'
+import Modal from '../Modal/Modal'
 
 const slickSetup = {
   dots: true,
@@ -17,29 +18,17 @@ const slickSetup = {
     {
       breakpoint: 768,
       settings: {
-        rows: 1,
+        rows: 2,
         slidesPerRow: 1,
-      },
-    },
-    {
-      breakpoint: 480,
-      settings: {
         slidesToShow: 1,
       },
     },
   ],
 }
 
-const ProjectInfo = project => (
-  <div>
-    <h3>{project.name}</h3>
-    <Paragraf>{project.description}</Paragraf>
-  </div>
-)
-
 export default function Projects({ props }) {
   const [isProjectOpen, setIsProjectOpen] = useState(false)
-  const [projectData, setProjectData] = useState([])
+  const [projectData, setProjectData] = useState(null)
 
   function onClickHandler(project) {
     setProjectData(project)
@@ -61,7 +50,13 @@ export default function Projects({ props }) {
           ))}
         </SliderSlick>
       </ProjectsWrapper>
-      {isProjectOpen && <ProjectInfo project={projectData} />}
+      <Modal>
+        <ProjectInfo
+          isOpen={isProjectOpen}
+          toggleOpen={setIsProjectOpen}
+          project={projectData}
+        />
+      </Modal>
     </>
   )
 }

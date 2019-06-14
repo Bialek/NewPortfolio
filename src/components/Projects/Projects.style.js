@@ -32,6 +32,7 @@ export const Project = styled.div`
   img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
   }
   h3 {
     position: absolute;
@@ -41,33 +42,6 @@ export const Project = styled.div`
     font-weight: 700;
     left: 0;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.5)
-  }
-`
-export const ProjectContent = styled.div`
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  height: 100%;
-  justify-content: space-between;
-`
-
-export const ProjectLink = styled.a`
-  display: inline-flex;
-  justify-content: space-between;
-  margin: 20px;
-  box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.3);
-  padding: 13px 20px;
-  color: rgba(255, 255, 255, 255.6);
-  text-decoration: none;
-  font-size: 1.3em;
-  border-radius: 20px;
-  transition: all ease-in-out 0.2s;
-  svg {
-    margin-left: 15px;
-  }
-  &:hover {
-    box-shadow: inset 0 0 6px rgba(255, 255, 255, 255.7);
-    color: rgba(255, 255, 255, 1);
+    background-color: rgba(0, 0, 0, 0.5);
   }
 `

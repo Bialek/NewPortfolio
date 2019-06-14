@@ -7,7 +7,6 @@ const Home = () => (
       Cześć, jestem Rafał i jestem Front-end Developerem.
     </PrimaryHeader>
     <Paragraf home>
-      {' '}
       Komputery pasjonowały mnie od dziecka. Swoją pierwszą stronę na zlecenie
       wykonałem w 2015 r.
     </Paragraf>

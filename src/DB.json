@@ -3,7 +3,13 @@
     {
       "name": "Wyszukiwarka Zdjęć Unsplash",
       "description":
-        "Projekt zbudowany od podstaw. Aplikacja służy do tworzenia katalogów zdjęć po przez wyszukiwaną fraze. Zdjęcia w katalogu może sortować według trzech wartości. Korzystamy tutaj z Api z strony Unsplash. W projekcje wykorzystałem: React, Redux, Redux-thunk oraz Styled-component.",
+        "Projekt zbudowany od podstaw. Aplikacja służy do tworzenia katalogów zdjęć po przez wyszukiwaną fraze. Zdjęcia w katalogu może sortować według trzech wartości. Korzystamy tutaj z API z strony Unsplash.",
+      "technology": [
+        "React",
+        "Redux",
+        "Redux-thunk",
+        "Styled-component"
+      ],
       "img": [
         "/images/projects/unsplash-images-search-engine/1.jpg",
         "/images/projects/unsplash-images-search-engine/2.jpg",
@@ -13,9 +19,17 @@
       "files": "/projects/unsplash-images-search-engine/index.html"
     },
     {
-      "name": "Baza danych państw ",
+      "name": "Baza państw na świecie",
       "description":
-        "Jeden z projektów zrealizowanych na Bootcampie Kodilla. Do projektu samodzielnie dodałem asynchroniczne pobieranie danych z zewnetrznego Api, przez co ilość państw wzrosła z 8 do ponad 250. Dodałem również style z zrealizowane przy użyciu Styled-Component oraz podstrone z ulubionymi państwami.",
+        "Baza 250 Państ na świecie, pobierana z API REST COUNTRIES",
+      "technology": [
+        "React",
+        "React-router",
+        "Redux",
+        "Redux-thunk",
+        "Styled-component",
+        "Redux-devTools"
+      ],
       "img": [
         "/images/projects/Countries-Database/1.jpg",
         "/images/projects/Countries-Database/2.jpg",
