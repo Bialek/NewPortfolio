@@ -10,7 +10,7 @@ export const ProjectInfoContainer = styled.div`
   background: linear-gradient(to bottom, #020107 0%, #201b46 70%);
   padding: 50px 30px;
   overflow: auto;
-  transform: ${props => (props.isOpen ? 'translateX(0)' : 'translateX(100%)')} ;
+  transform: ${props => (props.isOpen ? 'translateX(0)' : 'translateX(100%)')};
   transition: transform ease-in-out 0.4s;
   img {
     width: 85%;
@@ -41,14 +41,15 @@ export const ProjectLink = styled.a`
   padding: 13px 20px;
   color: rgba(255, 255, 255, 255.6);
   text-decoration: none;
-  font-size: 1.3em;
+  font-size: ${props => (props.disable ? '0.8em' : '1.3em')};
   border-radius: 20px;
   transition: all ease-in-out 0.2s;
   svg {
     margin-left: 15px;
   }
   &:hover {
-    box-shadow: inset 0 0 6px rgba(255, 255, 255, 255.7);
-    color: rgba(255, 255, 255, 1);
+    box-shadow: ${props =>
+      props.disable ? null : 'inset 0 0 6px rgba(255, 255, 255, 255.7)'};
+    color: ${props => (props.disable ? null : 'rgba(255, 255, 255, 1)')};
   }
 `

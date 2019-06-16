@@ -1,5 +1,6 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import uuid from 'uuid/v4'
 import {
   PrimaryHeader,
   Paragraf,
@@ -8,7 +9,6 @@ import {
 } from '../../Styled/Styles'
 import {
   ProjectInfoContainer,
-  ProjectContent,
   ProjectLink,
   ProjectButtons,
 } from './ProjectInfo.style'
@@ -53,6 +53,13 @@ export default function ProjectInfo(props) {
           <div>
             <PrimaryHeader>{props.project.name}</PrimaryHeader>
             <Paragraf>{props.project.description}</Paragraf>
+            <ProjectButtons>
+              {props.project.technology.map(technology => (
+                <ProjectLink key={uuid()} disable>
+                  {technology}
+                </ProjectLink>
+              ))}
+            </ProjectButtons>
             <ProjectButtons>
               <ProjectLink href={props.project.github} target="_blank">
                 Code

@@ -18,7 +18,7 @@ const Home = () => (
       czy KISS.
     </Paragraf>
     <Paragraf home>
-      Zrealizuje dla ciebie: strone, blog, sklep, aplikacje webową
+      Zrealizuje dla ciebie: strone, blog, sklep, aplikacje webową. Zapraszam do kontaktu.
     </Paragraf>
   </Container>
 )

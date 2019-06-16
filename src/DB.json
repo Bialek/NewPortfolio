@@ -42,7 +42,15 @@
       "name": "Heroku Chat Application",
       "description":
         "Chat pozwala na komunikacje z osobami znajdującymi się na stronie. Najłatwiejszym sposobem do przetestowania są dwie oddzielne karty w przeglądarce. Aplikacja korzysta z świetnego Api jakim jest Socket.io, pozwalajacy na stałą komunikacje z serwerem. Przy pomocy Styled-Components stworzyłem dwa motywy, jasny i ciemny oraz automatyczne focusowania inputów po najechanu myszką.  Back-end wykonany w Node.js a projekty udostępniony na Heroku.",
-      "img": [
+        "technology": [
+          "Node",
+          "Heroku",
+          "Socket.io",
+          "React",
+          "Redux",
+          "Styled-component"
+        ],
+        "img": [
         "/images/projects/Chat/1.jpg",
         "/images/projects/Chat/2.jpg",
         "/images/projects/Chat/3.jpg"
@@ -53,7 +61,15 @@
     {
       "name": "Hero Rent App",
       "description":
-        "Aplikacja do wynajmowania superbohaterów. Wykonana w czystym JS ES6, do styly wykorzystałem SCSS i BEM. Zawartość koszyka jest zapisywana do LocalStorage. Backend w NodeJS. Projekt realizowany dla Intive Patronage.",
+        "Aplikacja do wynajmowania superbohaterów. Wykonana w czystym JS ES6, do styly wykorzystałem SCSS i BEM. Zawartość koszyka jest zapisywana do LocalStorage. Projekt realizowany dla Intive Patronage.",
+        "technology": [
+          "JavaScript",
+          "SCSS",
+          "BEM",
+          "Node",
+          "Redux",
+          "Styled-component"
+        ],
       "img": [
         "/images/projects/Hero-rent/1.jpg",
         "/images/projects/Hero-rent/2.jpg",
@@ -66,7 +82,13 @@
     {
       "name": "Photo-layout",
       "description":
-        "Moja autorska wersja strony całkowicie odmienna od pliku PSD który dostałem, strone zrealizowałem z biblioteką Fullpage.js, pozostałe elementy dynamiczne wykonane w jQuery. Style wykonane w Scss. Stylom brakuje metodologii :(",
+        "Moja autorska wersja strony całkowicie odmienna od pliku PSD który dostałem, strone zrealizowałem z biblioteką Fullpage.js, pozostałe elementy dynamiczne wykonane w jQuery. Style wykonane w Scss.",
+      "technology": [
+        "SCSS",
+        "JavaScript",
+        "jQuery",
+        "Fullpage.js"
+      ],
       "img": [
         "/images/projects/Photo-layout-fullpage.js/1.jpg",
         "/images/projects/Photo-layout-fullpage.js/2.jpg",
@@ -78,7 +100,13 @@
     {
       "name": "ZTP-layout",
       "description":
-        "Zadanie rektutacyjne, zrealizowane na podstawie dostarczonego pliku PSD. Style wykonane w Sass, metodologia BEM. Projekt poddany walidacji. Framework JavaScript to jQuery. Na projekt miałem zaledwie 4 dni.",
+        "Layout Sklepu internetowego, zrealizowane na podstawie dostarczonego pliku PSD. Style wykonane w Sass, metodologia BEM. Projekt poddany walidacji. Framework JavaScript to jQuery. Na projekt miałem zaledwie 4 dni.",
+      "technology": [
+        "SCSS",
+        "BEM",
+        "JavaScript",
+        "jQuery"
+      ],
       "img": [
         "/images/projects/ZTP-layout/1.jpg",
         "/images/projects/ZTP-layout/2.jpg",
@@ -90,14 +118,18 @@
     {
       "name": "Portfolio",
       "description":
-        "To portfolio, zbudowane na ReactJS. Style wykonane w Styled-Components. Animacja tła wykonane Kod CSS.",
+        "To portfolio, zbudowane na React. Style wykonane w Styled-Components. Animacja tła wykonane w CSS.",
+      "technology": [
+        "React",
+        "Styled-component"
+      ],
       "img": [
         "/images/projects/ZTP-layout/1.jpg",
         "/images/projects/ZTP-layout/2.jpg",
         "/images/projects/ZTP-layout/3.jpg"
       ],
-      "github": "https://github.com/Bialek/ZTP-layout",
-      "files": "/projects/ZTP-layout/index.html"
+      "github": "https://github.com/Bialek/NewPortfolio",
+      "files": "http://bialekrafal.pl"
     }
   ]
 }
