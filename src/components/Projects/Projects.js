@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { PrimaryHeader, SliderSlick, } from '../../Styled/Styles'
+import { PrimaryHeader, SliderSlick } from '../../Styled/Styles'
 import { Project, ProjectsWrapper } from './Projects.style'
 import uuid from 'uuid/v4'
 import ProjectInfo from '../ProjectInfo/ProjectInfo'
@@ -26,7 +26,7 @@ const slickSetup = {
   ],
 }
 
-export default function Projects({ props }) {
+export default function Projects(props) {
   const [isProjectOpen, setIsProjectOpen] = useState(false)
   const [projectData, setProjectData] = useState(null)
 
@@ -37,9 +37,9 @@ export default function Projects({ props }) {
   return (
     <>
       <ProjectsWrapper>
-        <PrimaryHeader>Projekty</PrimaryHeader>
+        <PrimaryHeader>{props.name}</PrimaryHeader>
         <SliderSlick {...slickSetup}>
-          {props.map(project => (
+          {props.data.map(project => (
             <Project onClick={() => onClickHandler(project)} key={uuid()}>
               <h3>{project.name}</h3>
               <img

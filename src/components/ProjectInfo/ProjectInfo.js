@@ -11,6 +11,7 @@ import {
   ProjectInfoContainer,
   ProjectLink,
   ProjectButtons,
+  ProjectSpan,
 } from './ProjectInfo.style'
 
 const SlickButtonFix = ({ currentSlide, slideCount, children, ...props }) => (
@@ -52,19 +53,21 @@ export default function ProjectInfo(props) {
           </SliderSlick>
           <div>
             <PrimaryHeader>{props.project.name}</PrimaryHeader>
-            <Paragraf>{props.project.description}</Paragraf>
+            <Paragraf center>{props.project.description}</Paragraf>
             <ProjectButtons>
               {props.project.technology.map(technology => (
-                <ProjectLink key={uuid()} disable>
+                <ProjectSpan key={uuid()} disable>
                   {technology}
-                </ProjectLink>
+                </ProjectSpan>
               ))}
             </ProjectButtons>
             <ProjectButtons>
-              <ProjectLink href={props.project.github} target="_blank">
-                Code
-                <FontAwesomeIcon icon={['fab', 'github']} />
-              </ProjectLink>
+              {props.project.github && (
+                <ProjectLink href={props.project.github} target="_blank">
+                  Code
+                  <FontAwesomeIcon icon={['fab', 'github']} />
+                </ProjectLink>
+              )}
               <ProjectLink href={props.project.files} target="_blank">
                 Demo
                 <FontAwesomeIcon icon="desktop" />

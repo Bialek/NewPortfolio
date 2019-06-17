@@ -24,13 +24,19 @@ export const ProjectButtons = styled.div`
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  :first-of-type {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 10px 0;
+  }
 `
-export const ProjectContent = styled.div`
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  height: 100%;
-  justify-content: space-between;
+
+export const ProjectSpan = styled.div`
+  box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.3);
+  font-size: 0.8em;
+  padding: 10px 13px;
+  margin: 5px;
+  color: #fff;
+  border-radius: 20px;
 `
 
 export const ProjectLink = styled.a`
@@ -39,17 +45,15 @@ export const ProjectLink = styled.a`
   margin: 20px;
   box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.3);
   padding: 13px 20px;
-  color: rgba(255, 255, 255, 255.6);
+  color: #fff;
   text-decoration: none;
-  font-size: ${props => (props.disable ? '0.8em' : '1.3em')};
+  font-size: 1.3em;
   border-radius: 20px;
-  transition: all ease-in-out 0.2s;
+  transition: box-shadow ease-in-out 0.2s;
   svg {
     margin-left: 15px;
   }
-  &:hover {
-    box-shadow: ${props =>
-      props.disable ? null : 'inset 0 0 6px rgba(255, 255, 255, 255.7)'};
-    color: ${props => (props.disable ? null : 'rgba(255, 255, 255, 1)')};
+  :hover {
+    box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.9);
   }
 `

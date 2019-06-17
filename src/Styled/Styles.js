@@ -33,12 +33,6 @@ export const Button = styled.button`
   }
 `
 
-export const MainContent = styled.div`
-  width: calc(100vw - 55px);
-  height: 100%;
-  text-align: center;
-`
-
 export const PrimaryHeader = styled.h1`
   color: #fff;
   margin-bottom: ${props => (props.home ? '0' : '20px')};
@@ -59,7 +53,7 @@ export const Paragraf = styled.p`
   font-size: 1.2em;
   margin-bottom: ${props => (props.home ? '0' : '10px')};
   text-decoration: none;
-  text-align: ${props => props.home}
+  text-align: center;
   margin: ${props => (props.contact ? '0 0 0 20px' : '')};
 `
 

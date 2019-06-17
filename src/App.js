@@ -36,7 +36,8 @@ class App extends Component {
           pageOnChange={this.pageOnChange}>
           <Home />
           <Skills />
-          <Projects props={DB.projects} />
+          <Projects name={'Projekty'} data={DB.projects} />
+          <Projects name={'Realizacje'} data={DB.works} />
           <Contact />
         </PageScroller>
       </Page>
